@@ -1,0 +1,41 @@
+{
+  "method": "WCAG sRGB relative luminance on known opaque CSS colors; pseudoelements manually inspected",
+  "checks": [
+    {
+      "element": "指标单位",
+      "foreground": "#58667e",
+      "background": "#ffffff",
+      "ratio": 5.81
+    },
+    {
+      "element": "禾野封面最暗背景",
+      "foreground": "#2f512f",
+      "background": "#b0c9a2",
+      "ratio": 5.01
+    },
+    {
+      "element": "禾野封面底色",
+      "foreground": "#2f512f",
+      "background": "#e8efdf",
+      "ratio": 7.63
+    },
+    {
+      "element": "山海封面最暗背景",
+      "foreground": "#4e493e",
+      "background": "#d4cab6",
+      "ratio": 5.51
+    },
+    {
+      "element": "山海封面底色",
+      "foreground": "#4e493e",
+      "background": "#ede7db",
+      "ratio": 7.27
+    },
+    {
+      "element": "弹窗说明",
+      "foreground": "#58667e",
+      "background": "#ffffff",
+      "ratio": 5.81
+    }
+  ]
+}

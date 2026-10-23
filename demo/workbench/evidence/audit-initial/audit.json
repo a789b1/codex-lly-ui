@@ -1,0 +1,2047 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-23T23:33:13.748Z",
+  "target": "index.html",
+  "views": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/audit-initial/desktop.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".workspace-label"
+                ],
+                "html": "<div class=\"workspace-label\">林一的工作室 <span class=\"workspace-dot\">个人</span></div>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.25 (foreground color: #717b90, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".workspace-dot"
+                ],
+                "html": "<span class=\"workspace-dot\">个人</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.43 (foreground color: #657088, background color: #f0f2f6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".small-label"
+                ],
+                "html": "<span class=\"small-label\">留一点空间，给好想法。</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #758096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".breadcrumb"
+                ],
+                "html": "<span class=\"breadcrumb\">我的工作空间 <span>/</span> <strong>工作台</strong></span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #737e91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".greeting"
+                ],
+                "html": "<div class=\"greeting\"><span class=\"sun-symbol\" aria-hidden=\"true\">✳</span> 今天也给创作留点时间</div>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".lead"
+                ],
+                "html": "<p class=\"lead\">项目、待办与交付，都在你的节奏里。</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(1) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\"><i class=\"dot blue\"></i>稳步向前</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(2) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\">给想法一点发酵时间</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(3) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\"><span data-icon=\"arrow-up-right\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M7 6h11v11\"></path></svg></span> 先把重要的事做好</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".focus-note > span:nth-child(3)"
+                ],
+                "html": "<span>品牌视觉 · 最终方案</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #5c6ea6, background color: #eaf0ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".view-hint"
+                ],
+                "html": "<div class=\"view-hint\">",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.43 (foreground color: #7b8598, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"active\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"active\" aria-pressed=\"false\">进行中</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"review\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"review\" aria-pressed=\"false\">待反馈</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"done\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"done\" aria-pressed=\"false\">已完成</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "kbd"
+                ],
+                "html": "<kbd aria-hidden=\"true\">⌘ K</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #738098, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">禾野植物研究所</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>75%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 25 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">拾光咖啡</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>90%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 24 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">产品设计</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">NOVA 音乐</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>40%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 28 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".brand"
+                ],
+                "html": "<a class=\"brand\" href=\"./index.html\" aria-label=\"序间，返回工作台\"><span class=\"brand-mark\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i></span><span>序间<span class=\"brand-sub\">独立创作者的工作空间</span></span></a>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "#profile-button"
+                ],
+                "html": "<button class=\"profile\" id=\"profile-button\" aria-label=\"查看工作空间信息\"><span class=\"avatar\">林</span><span><strong>林一</strong><small>独立设计师</small></span><span data-icon=\"chevrons\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 8 3-3 3 3m-6 8 3 3 3-3\"></path></svg></span></button>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"heye\" aria-label=\"查看禾野 · 品牌视觉设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"sip\" aria-label=\"查看拾光咖啡 · 品牌焕新\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"nova\" aria-label=\"查看NOVA · 音乐社区设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"shanhai\" aria-label=\"查看山海之间 · 酒店官网\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "help": "Elements must only use permitted ARIA attributes",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 18
+          }
+        ],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 110
+            },
+            {
+              "value": "rgb(120, 131, 153)",
+              "count": 24
+            },
+            {
+              "value": "rgb(95, 107, 130)",
+              "count": 14
+            },
+            {
+              "value": "rgb(116, 128, 151)",
+              "count": 12
+            },
+            {
+              "value": "rgb(122, 133, 153)",
+              "count": 9
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(45, 77, 188)",
+              "count": 7
+            },
+            {
+              "value": "rgb(109, 120, 144)",
+              "count": 7
+            },
+            {
+              "value": "rgb(123, 133, 152)",
+              "count": 7
+            },
+            {
+              "value": "rgb(116, 128, 150)",
+              "count": 6
+            },
+            {
+              "value": "rgb(123, 134, 154)",
+              "count": 6
+            },
+            {
+              "value": "rgb(138, 148, 168)",
+              "count": 5
+            },
+            {
+              "value": "rgb(117, 128, 150)",
+              "count": 4
+            },
+            {
+              "value": "rgb(44, 70, 153)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 93, 59)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(105, 119, 140)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(96, 88, 76)",
+              "count": 4
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 236
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 18
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 6
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 2
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(240, 242, 246)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 238, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 237, 247)",
+              "count": 1
+            },
+            {
+              "value": "rgba(233, 238, 255, 0.6)",
+              "count": 1
+            },
+            {
+              "value": "rgba(243, 245, 252, 0.6)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 302
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "12px",
+              "count": 140
+            },
+            {
+              "value": "14px",
+              "count": 119
+            },
+            {
+              "value": "13px",
+              "count": 22
+            },
+            {
+              "value": "25px",
+              "count": 7
+            },
+            {
+              "value": "29px",
+              "count": 5
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 3
+            },
+            {
+              "value": "17px",
+              "count": 2
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "9px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 21
+            },
+            {
+              "value": "5px",
+              "count": 13
+            },
+            {
+              "value": "6px",
+              "count": 13
+            },
+            {
+              "value": "7px",
+              "count": 13
+            },
+            {
+              "value": "8px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "24px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "20px",
+              "count": 5
+            },
+            {
+              "value": "4px",
+              "count": 5
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 5
+            },
+            {
+              "value": "3px",
+              "count": 5
+            },
+            {
+              "value": "14px",
+              "count": 4
+            },
+            {
+              "value": "10px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "36px",
+              "count": 2
+            },
+            {
+              "value": "17px",
+              "count": 2
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/audit-initial/mobile.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".breadcrumb"
+                ],
+                "html": "<span class=\"breadcrumb\">我的工作空间 <span>/</span> <strong>工作台</strong></span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #737e91, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".greeting"
+                ],
+                "html": "<div class=\"greeting\"><span class=\"sun-symbol\" aria-hidden=\"true\">✳</span> 今天也给创作留点时间</div>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".lead"
+                ],
+                "html": "<p class=\"lead\">项目、待办与交付，都在你的节奏里。</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".view-hint"
+                ],
+                "html": "<div class=\"view-hint\">",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.43 (foreground color: #7b8598, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"active\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"active\" aria-pressed=\"false\">进行中</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"review\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"review\" aria-pressed=\"false\">待反馈</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"done\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"done\" aria-pressed=\"false\">已完成</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "kbd"
+                ],
+                "html": "<kbd aria-hidden=\"true\">⌘ K</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #738098, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">禾野植物研究所</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>75%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 25 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">拾光咖啡</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>90%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 24 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">产品设计</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">NOVA 音乐</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>40%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 28 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">网站设计</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">山海之间精品酒店</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>100%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 21 日 已交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".month-tag"
+                ],
+                "html": "<span class=\"month-tag\">10 月</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6b7890, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".delivery-item:nth-child(1) > div > p"
+                ],
+                "html": "<p>品牌视觉 · 拾光咖啡</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.53 (foreground color: #77839a, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  "button[data-project=\"heye\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"heye\" aria-label=\"查看禾野 · 品牌视觉设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"sip\" aria-label=\"查看拾光咖啡 · 品牌焕新\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"nova\" aria-label=\"查看NOVA · 音乐社区设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"shanhai\" aria-label=\"查看山海之间 · 酒店官网\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "help": "Elements must only use permitted ARIA attributes",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 18
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodes": 1
+          }
+        ],
+        "passes": 24
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 99
+            },
+            {
+              "value": "rgb(120, 131, 153)",
+              "count": 24
+            },
+            {
+              "value": "rgb(116, 128, 151)",
+              "count": 12
+            },
+            {
+              "value": "rgb(122, 133, 153)",
+              "count": 9
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(109, 120, 144)",
+              "count": 7
+            },
+            {
+              "value": "rgb(123, 133, 152)",
+              "count": 7
+            },
+            {
+              "value": "rgb(123, 134, 154)",
+              "count": 6
+            },
+            {
+              "value": "rgb(138, 148, 168)",
+              "count": 5
+            },
+            {
+              "value": "rgb(59, 93, 59)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(105, 119, 140)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(96, 88, 76)",
+              "count": 4
+            },
+            {
+              "value": "rgb(103, 116, 141)",
+              "count": 3
+            },
+            {
+              "value": "rgb(123, 133, 153)",
+              "count": 3
+            },
+            {
+              "value": "rgb(102, 114, 138)",
+              "count": 3
+            },
+            {
+              "value": "rgb(119, 131, 154)",
+              "count": 3
+            },
+            {
+              "value": "rgb(138, 99, 38)",
+              "count": 3
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 180
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 17
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 5
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 1
+            },
+            {
+              "value": "rgb(244, 246, 250)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 237, 244)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 239, 223)",
+              "count": 1
+            },
+            {
+              "value": "rgb(241, 185, 160)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 241, 218)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 236
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 103
+            },
+            {
+              "value": "12px",
+              "count": 103
+            },
+            {
+              "value": "23px",
+              "count": 7
+            },
+            {
+              "value": "13px",
+              "count": 7
+            },
+            {
+              "value": "16px",
+              "count": 6
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "27px",
+              "count": 3
+            },
+            {
+              "value": "34px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "15px",
+              "count": 1
+            },
+            {
+              "value": "9px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "7px",
+              "count": 17
+            },
+            {
+              "value": "12px",
+              "count": 13
+            },
+            {
+              "value": "6px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 9
+            },
+            {
+              "value": "5px",
+              "count": 9
+            },
+            {
+              "value": "20px",
+              "count": 8
+            },
+            {
+              "value": "8px",
+              "count": 8
+            },
+            {
+              "value": "3px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 4
+            },
+            {
+              "value": "4px",
+              "count": 4
+            },
+            {
+              "value": "10px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "15px",
+              "count": 2
+            },
+            {
+              "value": "22px",
+              "count": 2
+            },
+            {
+              "value": "17px",
+              "count": 1
+            },
+            {
+              "value": "24px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    },
+    {
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/audit-initial/tablet.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".breadcrumb"
+                ],
+                "html": "<span class=\"breadcrumb\">我的工作空间 <span>/</span> <strong>工作台</strong></span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #737e91, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".greeting"
+                ],
+                "html": "<div class=\"greeting\"><span class=\"sun-symbol\" aria-hidden=\"true\">✳</span> 今天也给创作留点时间</div>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".lead"
+                ],
+                "html": "<p class=\"lead\">项目、待办与交付，都在你的节奏里。</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #6d7890, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(1) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\"><i class=\"dot blue\"></i>稳步向前</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(2) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\">给想法一点发酵时间</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".metric:nth-child(3) > .metric-note"
+                ],
+                "html": "<span class=\"metric-note\"><span data-icon=\"arrow-up-right\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 18 18 6M7 6h11v11\"></path></svg></span> 先把重要的事做好</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #748096, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  ".view-hint"
+                ],
+                "html": "<div class=\"view-hint\">",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.43 (foreground color: #7b8598, background color: #f4f6fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"active\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"active\" aria-pressed=\"false\">进行中</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"review\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"review\" aria-pressed=\"false\">待反馈</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-filter=\"done\"]"
+                ],
+                "html": "<button class=\"filter\" data-filter=\"done\" aria-pressed=\"false\">已完成</button>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #66728a, background color: #e9edf4, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "kbd"
+                ],
+                "html": "<kbd aria-hidden=\"true\">⌘ K</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.98 (foreground color: #738098, background color: #ffffff, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">禾野植物研究所</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>75%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"heye\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 25 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">品牌视觉</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">拾光咖啡</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>90%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 24 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">产品设计</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">NOVA 音乐</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>40%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"] > .card-foot > .due-label"
+                ],
+                "html": "<span class=\"due-label\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M7 3v4m10-4v4M3 11h18m-12 5h2\"></path></svg>10 月 28 日 交付</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .card-meta > .card-type"
+                ],
+                "html": "<span class=\"card-type\">网站设计</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #788399, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .card-client"
+                ],
+                "html": "<p class=\"card-client\">山海之间精品酒店</p>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #7a8599, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .progress-row > span:nth-child(1)"
+                ],
+                "html": "<span>项目进度</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"] > .card-main > .progress-row > span:nth-child(2)"
+                ],
+                "html": "<span>100%</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #748097, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  "button[data-project=\"heye\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"heye\" aria-label=\"查看禾野 · 品牌视觉设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"sip\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"sip\" aria-label=\"查看拾光咖啡 · 品牌焕新\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"nova\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"nova\" aria-label=\"查看NOVA · 音乐社区设计\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "button[data-project=\"shanhai\"]"
+                ],
+                "html": "<button class=\"card-open\" data-project=\"shanhai\" aria-label=\"查看山海之间 · 酒店官网\">",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "aria-prohibited-attr",
+            "help": "Elements must only use permitted ARIA attributes",
+            "nodes": 2
+          },
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodes": 18
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodes": 1
+          }
+        ],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "A",
+            "text": "序间，返回工作台"
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 99
+            },
+            {
+              "value": "rgb(120, 131, 153)",
+              "count": 24
+            },
+            {
+              "value": "rgb(95, 107, 130)",
+              "count": 14
+            },
+            {
+              "value": "rgb(116, 128, 151)",
+              "count": 12
+            },
+            {
+              "value": "rgb(122, 133, 153)",
+              "count": 9
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(45, 77, 188)",
+              "count": 7
+            },
+            {
+              "value": "rgb(109, 120, 144)",
+              "count": 7
+            },
+            {
+              "value": "rgb(123, 133, 152)",
+              "count": 7
+            },
+            {
+              "value": "rgb(116, 128, 150)",
+              "count": 6
+            },
+            {
+              "value": "rgb(123, 134, 154)",
+              "count": 6
+            },
+            {
+              "value": "rgb(138, 148, 168)",
+              "count": 5
+            },
+            {
+              "value": "rgb(59, 93, 59)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(105, 119, 140)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(96, 88, 76)",
+              "count": 4
+            },
+            {
+              "value": "rgb(103, 116, 141)",
+              "count": 3
+            },
+            {
+              "value": "rgb(123, 133, 153)",
+              "count": 3
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 208
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 18
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 6
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 2
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 238, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 237, 244)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 239, 223)",
+              "count": 1
+            },
+            {
+              "value": "rgb(241, 185, 160)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 241, 218)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 267
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "12px",
+              "count": 126
+            },
+            {
+              "value": "14px",
+              "count": 101
+            },
+            {
+              "value": "0px",
+              "count": 21
+            },
+            {
+              "value": "23px",
+              "count": 6
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 3
+            },
+            {
+              "value": "29px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "13px",
+              "count": 1
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "9px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 21
+            },
+            {
+              "value": "7px",
+              "count": 15
+            },
+            {
+              "value": "5px",
+              "count": 12
+            },
+            {
+              "value": "8px",
+              "count": 10
+            },
+            {
+              "value": "6px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 9
+            },
+            {
+              "value": "3px",
+              "count": 6
+            },
+            {
+              "value": "20px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 5
+            },
+            {
+              "value": "4px",
+              "count": 4
+            },
+            {
+              "value": "14px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "10px",
+              "count": 2
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "28px",
+              "count": 1
+            },
+            {
+              "value": "30px",
+              "count": 1
+            },
+            {
+              "value": "22px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    }
+  ],
+  "gate": "fail",
+  "limitations": [
+    "Automated checks do not certify WCAG compliance or judge visual quality.",
+    "Axe incomplete results require manual review.",
+    "Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.",
+    "Reduced-motion is enabled for reproducible screenshots; animation requires a separate review."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-23T23:27:36.150Z",
+  "goal": "让独立设计师在一个工作台里看清本周交付、新建项目并推进状态",
+  "audience": "同时服务多个客户的独立设计师和自由职业者",
+  "primaryAction": "创建项目并推进交付",
+  "constraints": [
+    "中文界面，桌面和手机可用",
+    "无后端，数据保存于浏览器；明确在交付说明中说明",
+    "不依赖远程字体或图片，离线可运行",
+    "键盘可操作、表单校验、错误可恢复",
+    "三个真实候选后自主选择并完成，不等待用户逐步确认"
+  ],
+  "directions": [
+    {
+      "name": "A · 轻盈工作台",
+      "layout": "固定左侧导航，主区域项目卡片，右侧本周交付；让进度与行动同屏",
+      "typography": "苹方 / 系统无衬线，数字用等宽字体，标题克制放大",
+      "color": "冷白 #F4F6FA、墨蓝 #202B44、群青 #3658D4、浅蓝 #E9EEFF"
+    },
+    {
+      "name": "B · 交付日历",
+      "layout": "横向导航，中央七日时间轴，下方按日期排列项目，强调交付先后",
+      "typography": "大号日期数字与紧凑中文，弱化卡片标题",
+      "color": "浅杏 #FBF6EE、栗色 #6B4433、橙色 #C85C25"
+    },
+    {
+      "name": "C · 项目索引",
+      "layout": "顶部深色工具带，大幅项目清单表格，底部横向任务区，偏高密度管理",
+      "typography": "系统黑体配等宽编号，表格行高64px",
+      "color": "深蓝 #182331、纸白 #F7F8F9、青绿 #167469"
+    }
+  ],
+  "acceptance": [
+    "Primary user action is visible and operable",
+    "Keyboard navigation and visible focus are checked",
+    "Mobile layout avoids unintentional overflow",
+    "Empty, loading, error and success states have explicit behavior"
+  ],
+  "status": "implemented-and-verified",
+  "note": "Directions are provided by the Codex designer, not inferred by a scoring algorithm.",
+  "selectedDirection": "A · 轻盈工作台",
+  "selectionReason": "项目封面帮助识别作品，右栏让交付和待办与项目同屏；比日历优先和高密度索引更适合独立创作者。",
+  "selectionAuthority": "用户要求自主完整演示；由本次执行者选择，不代表用户已签署验收"
+}

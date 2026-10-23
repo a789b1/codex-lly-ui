@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "target": "index.html",
+  "createdAt": "2026-10-23T23:38:51.092Z",
+  "views": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "path": "evidence/visual-baseline-images/desktop.png",
+      "sha256": "a50b56539e683e2da1f9dff86923200f72c503c161d588d1a0b3bd23d25f0796"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "path": "evidence/visual-baseline-images/mobile.png",
+      "sha256": "b57a4a22adf6821a5944351648588442e3fdc2bc63175b13030f6b5d7ba35a6b"
+    },
+    {
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "path": "evidence/visual-baseline-images/tablet.png",
+      "sha256": "02f1584b59f89ea3efd74035dfd032cd54423341057102cfc008d9110519f58c"
+    }
+  ]
+}

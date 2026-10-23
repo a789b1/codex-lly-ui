@@ -1,0 +1,70 @@
+{
+  "main": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#review-count > small"
+            ],
+            "html": "<small>个</small>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          },
+          {
+            "target": [
+              "#due-count > small"
+            ],
+            "html": "<small>个</small>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          },
+          {
+            "target": [
+              ".cover-green > .cover-title > b"
+            ],
+            "html": "<b>禾 野</b>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          },
+          {
+            "target": [
+              ".cover-green > .cover-title > small"
+            ],
+            "html": "<small>HERB &amp; EVERYDAY</small>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          },
+          {
+            "target": [
+              ".cover-sand > .cover-title > b"
+            ],
+            "html": "<b>山海之间</b>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          },
+          {
+            "target": [
+              ".cover-sand > .cover-title > small"
+            ],
+            "html": "<small>BETWEEN MOUNTAINS &amp; SEA</small>",
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+          }
+        ]
+      }
+    ]
+  },
+  "modal": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".dialog-description"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ]
+  }
+}

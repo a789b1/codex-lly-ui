@@ -66,6 +66,14 @@ codex plugin add codex-lly-ui@codex-lly-ui
 - 像素差异反映变化量，不评判设计优劣。动态内容应使用稳定测试数据。
 - 哈希用于发现文件变化，不是第三方认证或电子签名。
 
+## 实际页面案例
+
+[序间 · 独立创作者工作台](demo/workbench/README.md) 是用本插件完成的可运行中文页面，支持项目创建、状态推进、搜索筛选、待办和刷新恢复。包含三方向比较、真实浏览器交互证据、多视口审计、视觉回归及初稿/完成版验收报告。
+
+![序间工作台实际成品](demo/workbench/evidence/finished-desktop/capture.png)
+
+页面中的品牌和项目为演示内容；保存与状态变更在浏览器本地真实执行。验收范围和限制见 [ACCEPTANCE.md](demo/workbench/ACCEPTANCE.md)。
+
 ## 开发
 
 ```sh

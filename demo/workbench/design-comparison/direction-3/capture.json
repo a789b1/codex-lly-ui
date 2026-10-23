@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "target": "explore/c.html",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/design-comparison/direction-3/capture.png",
+  "steps": [],
+  "observed": {
+    "title": "C · 项目索引",
+    "url": "http://127.0.0.1:52421/explore/c.html",
+    "text": "序间\n项目索引\n交付日程\n创作笔记\n林一 · 独立设计师\n每一件作品，都值得有始有终。\n\n你的独立工作室，一目了然。\n\n＋ 新建项目\n3进行中的项目\n1等待客户反馈\n2本周待交付\n全部项目 4\n进行中\n待反馈\n已完成\n搜索项目或客户\n编号\t项目 / 客户\t类型\t状态\t交付日期\t进度\n001\t\n禾野 · 品牌视觉设计\n禾野植物研究所\t品牌视觉\t进行中\t10 月 25 日\t75%\n\n002\t\n拾光咖啡 · 品牌焕新\n拾光咖啡\t品牌视觉\t待反馈\t10 月 24 日\t90%\n\n003\t\nNOVA · 音乐社区设计\nNOVA 音乐\t产品设计\t进行中\t10 月 28 日\t40%\n\n004\t\n山海之间 · 酒店官网\n山海之间精品酒店\t网站设计\t已完成\t10 月 21 日\t100%\n今天的小目标\n整理本周灵感参考\n发送禾野品牌终稿\n确认拾光咖啡反馈\n本周专注\n把「禾野」的故事，讲得更动人。\n\n品牌视觉 · 最终方案\n\n先把重要的事做好，再给新的灵感留出空间。",
+    "activeElement": "<body><header><strong>序间</strong><span>项目索引</span><span>交付日程</span><span>创作笔记</span><span class=\"user\">林一 · 独立设计师</span></header><main><div class=\"heading\"><div><h1>每一件作品，都值得有始有终。</h1><p>你的独立工作室，一目了然。</p></div><button>＋ 新建项目</button></div><div class=\"summary\"><span><strong>3</strong>进行中的项目</span><span><strong>1</strong>等待客户反馈</span><span><strong>2</strong>本周待交付</span></div><div class=\"toolbar\"><div class=\"tabs\"><b>全部项目 4</b><span>进行中</span><span>待反馈</span><span>已完成</span></div><span class=\"searc"
+  },
+  "consoleErrors": [],
+  "note": "Observed DOM and actual screenshot after the listed actions; this does not prove persistence or backend success."
+}

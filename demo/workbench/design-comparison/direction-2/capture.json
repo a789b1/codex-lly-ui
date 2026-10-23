@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "target": "explore/b.html",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/design-comparison/direction-2/capture.png",
+  "steps": [],
+  "observed": {
+    "title": "B · 交付日历",
+    "url": "http://127.0.0.1:52421/explore/b.html",
+    "text": "序间\n交付日历\n我的项目\n创作笔记\n林一的工作室\n\n2026 年 10 月 · 创作有时，交付有序\n\n看清一周，专注今天。\n＋ 新建项目\n10 月 19 日 — 25 日\n3 个进行中 · 1 个待反馈 · 2 个本周交付\n星期一\n19\n星期二\n20\n星期三\n21\n山海之间\n酒店官网 · 已完成\n星期四\n22\n星期五\n23\n星期六 · 今天\n24\n拾光咖啡\n品牌焕新 · 待反馈\n进度 90%\n星期日\n25\n禾野植物研究所\n品牌视觉 · 方案交付\n进度 75%\n接下来的一件事\nNOVA · 音乐社区设计\n10 月 28 日 · 进度 40%\n\n做少一点，做好一点。\n\n今天的小目标\n发送禾野品牌终稿\n待办\n确认拾光咖啡反馈\n待办",
+    "activeElement": "<body><header><strong>序间</strong><nav><span>交付日历</span><span>我的项目</span><span>创作笔记</span></nav><span>林一的工作室</span></header><main><div class=\"head\"><div><p>2026 年 10 月 · 创作有时，交付有序</p><h1>看清一周，专注今天。</h1></div><button class=\"button\">＋ 新建项目</button></div><div class=\"month\"><h2>10 月 19 日 — 25 日</h2><span>3 个进行中 · 1 个待反馈 · 2 个本周交付</span></div><div class=\"grid\"><div class=\"day\"><small>星期一</small><strong>19</strong></div><div class=\"day\"><small>星期二</small><strong>20</strong></div><div class=\"day\"><small"
+  },
+  "consoleErrors": [],
+  "note": "Observed DOM and actual screenshot after the listed actions; this does not prove persistence or backend success."
+}
