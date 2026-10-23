@@ -1,0 +1,16 @@
+{
+  "name": "codex-lly-ui",
+  "interface": {
+    "displayName": "Codex LLY UI"
+  },
+  "plugins": [
+    {
+      "name": "codex-lly-ui",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-lly-ui"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+import {Client} from '@modelcontextprotocol/sdk/client/index.js';
+import {StdioClientTransport} from '@modelcontextprotocol/sdk/client/stdio.js';
+import {mkdir,writeFile,readFile} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+const cwd=resolve(process.argv[2]||'/tmp/codex-lly-ui-proof');await mkdir(cwd,{recursive:true});
+const html=(broken=false)=>`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLY review fixture</title><style>:root{--accent:#136b68;--space:24px}*{box-sizing:border-box}body{margin:0;font:18px/1.6 system-ui;color:#193a3a;background:#edf4f4}main{max-width:960px;margin:60px auto;padding:32px}h1{font-size:48px;line-height:1.1}button{font:inherit;color:white;background:var(--accent);padding:14px 24px;border:0;border-radius:8px}button:focus-visible{outline:3px solid #8c3d17;outline-offset:4px}@media(max-width:600px){main{margin:20px auto;padding:24px}h1{font-size:36px}}</style><main><h1>Evidence before approval.</h1><p>Check the interface at desktop and mobile sizes. Save a baseline before changing the design.</p><button onclick="this.textContent='Review saved'">${broken?'':'Save review'}</button>${broken?'<img src="missing.png"><div style="width:2400px">Overflow fixture</div>':''}</main></html>`;
+await writeFile(join(cwd,'index.html'),html());
+const transport=new StdioClientTransport({command:process.execPath,args:[resolve('plugins/codex-lly-ui/server/index.mjs')],stderr:'pipe'});
+const client=new Client({name:'lly-smoke',version:'1.0.0'});
+transport.stderr?.on('data',chunk=>process.stderr.write(chunk));
+const call=async(name,args)=>{const r=await client.callTool({name,arguments:{cwd,...args}},undefined,{timeout:240000});const data=JSON.parse(r.content[0].text);if(r.isError)throw new Error(JSON.stringify(data));return data;};
+try{
+ await client.connect(transport);const list=await client.listTools();console.log('tools',list.tools.map(x=>x.name));
+ console.log('status',(await call('lly_ui_status',{})).readyForAudit);
+ await call('lly_ui_brief',{goal:'Review a product interface',audience:'Design reviewers',primaryAction:'Save review',directions:[{name:'Editorial',layout:'Single reading column',typography:'Large system headings',color:'Teal'},{name:'Workspace',layout:'Sidebar and task canvas',typography:'Compact sans',color:'Blue'}]});
+ await mkdir(join(cwd,'explore'),{recursive:true});for(const n of ['a','b','c'])await writeFile(join(cwd,'explore',n+'.html'),html().replace('Evidence before approval.',`Direction ${n.toUpperCase()}`));
+ const explorer=await call('lly_ui_explorer',{candidates:['a','b','c'].map(n=>({name:'Direction '+n,path:'explore/'+n+'.html',reason:'Actual rendered candidate '+n})),out:'comparison'});console.log('explorer',explorer.ok);
+ const click=await call('lly_ui_capture',{target:'index.html',steps:[{action:'click',selector:'button'}],out:'interaction'});if(!click.observed.text.includes('Review saved'))throw Error('Click result missing');
+ await call('lly_ui_assets',{file:'interaction/capture.png',sourceURL:'https://github.com/a789b1/codex-lly-ui',license:'Project test fixture',attribution:'lly'});
+ const good=await call('lly_ui_audit',{target:'index.html',out:'good'});console.log('good',good.gate,good.views.map(v=>({device:v.device,violations:v.accessibility.violations.length})));
+ if(good.gate!=='pass')throw new Error('Expected clean fixture pass');
+ await call('lly_ui_baseline',{action:'capture',audit:'good/audit.json',baseline:'baseline.json'});
+ const same=await call('lly_ui_baseline',{action:'compare',audit:'good/audit.json',baseline:'baseline.json',out:'same'});if(same.gate!=='pass')throw new Error('Identical baseline failed');
+ await writeFile(join(cwd,'index.html'),html(true));
+ const bad=await call('lly_ui_audit',{target:'index.html',out:'bad'});console.log('bad',bad.gate,bad.views.map(v=>({device:v.device,violations:v.accessibility.violations.map(v=>v.id),overflow:v.dom.overflow})));
+ if(bad.gate!=='fail')throw new Error('Expected intentionally broken fixture fail');
+ const changed=await call('lly_ui_baseline',{action:'compare',audit:'bad/audit.json',baseline:'baseline.json',maxChangedRatio:0,out:'changed'});if(changed.gate!=='fail')throw new Error('Changed baseline passed');
+ const report=await call('lly_ui_report',{audits:['good/audit.json','bad/audit.json'],out:'review.html',title:'Codex LLY UI · Verification'});console.log('report',report.report);
+ const invalid=await client.callTool({name:'lly_ui_audit',arguments:{cwd,target:'../private.html'}});if(!invalid.isError)throw new Error('Traversal was accepted');
+ await writeFile(join(cwd,'proof.json'),JSON.stringify({tools:list.tools.map(t=>t.name),clean:good.gate,broken:bad.gate,same:same.gate,changed:changed.gate,report},null,2));
+ console.log('PASS: MCP negotiation, tools, explorer, real audits, baseline equality/change, report, asset provenance and path rejection');
+}finally{await client.close();}
