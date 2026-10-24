@@ -48,7 +48,7 @@ export class CodexRuntime{
  private async execute(name:string,cwd:string,a:Record<string,any>,signal?:AbortSignal){
   const run=()=>`lly-evidence/${Date.now()}-${randomUUID().slice(0,8)}`;
   switch(name){
-   case 'lly_ui_status':return {ok:true,plugin:'codex-lly-ui',version:'0.4.0',node:process.version,cwd,browser:findBrowser(),readyForAudit:Boolean(findBrowser()),tools:tools.map(t=>t.name),imageGeneration:'Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs.'};
+   case 'lly_ui_status':return {ok:true,plugin:'codex-lly-ui',version:'0.5.0',node:process.version,cwd,browser:findBrowser(),readyForAudit:Boolean(findBrowser()),tools:tools.map(t=>t.name),imageGeneration:'Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs.'};
    case 'lly_ui_brief':return designBrief(this.workspace,cwd,{...a,constraints:a.constraints||[],out:a.out||'lly-design-brief.json'} as any);
    case 'lly_ui_explorer':return exploration(this.workspace,cwd,{...a,out:a.out||run(),device:a.device||'desktop'} as any,signal);
    case 'lly_ui_capture':return capture(this.workspace,cwd,{...a,out:a.out||run(),device:a.device||'desktop'} as any,signal);

@@ -20154,7 +20154,7 @@ var CodexRuntime = class {
     const run = () => `lly-evidence/${Date.now()}-${randomUUID().slice(0, 8)}`;
     switch (name) {
       case "lly_ui_status":
-        return { ok: true, plugin: "codex-lly-ui", version: "0.4.0", node: process.version, cwd, browser: findBrowser(), readyForAudit: Boolean(findBrowser()), tools: tools.map((t) => t.name), imageGeneration: "Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs." };
+        return { ok: true, plugin: "codex-lly-ui", version: "0.5.0", node: process.version, cwd, browser: findBrowser(), readyForAudit: Boolean(findBrowser()), tools: tools.map((t) => t.name), imageGeneration: "Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs." };
       case "lly_ui_brief":
         return designBrief(this.workspace, cwd, { ...a, constraints: a.constraints || [], out: a.out || "lly-design-brief.json" });
       case "lly_ui_explorer":
@@ -20181,7 +20181,7 @@ var CodexRuntime = class {
 
 // src/server.ts
 var runtime = new CodexRuntime();
-var server = new Server({ name: "codex-lly-ui", version: "0.4.0" }, { capabilities: { tools: {} } });
+var server = new Server({ name: "codex-lly-ui", version: "0.5.0" }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools }));
 server.setRequestHandler(CallToolRequestSchema, async (request, extra) => {
   try {

@@ -4,7 +4,7 @@ import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
 import { CodexRuntime,tools } from './runtime.ts';
 const runtime=new CodexRuntime();
-const server=new Server({name:'codex-lly-ui',version:'0.4.0'},{capabilities:{tools:{}}});
+const server=new Server({name:'codex-lly-ui',version:'0.5.0'},{capabilities:{tools:{}}});
 server.setRequestHandler(ListToolsRequestSchema,async()=>({tools}));
 server.setRequestHandler(CallToolRequestSchema,async(request,extra)=>{
  try {

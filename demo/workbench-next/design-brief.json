@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-24T00:22:48.199Z",
+  "goal": "让独立创作者先识别下一份交付，再查找和推进项目；保留序间温和、有秩序的品牌",
+  "audience": "同时处理少量品牌和网站项目的独立设计师",
+  "primaryAction": "打开最近交付项目并推进状态",
+  "constraints": [
+    "保留上一版页面与数据格式",
+    "不复制 DSH 的代码、画面或素材",
+    "沿用中文内容与真实本地保存",
+    "不以机器检查作为审美评分"
+  ],
+  "qualityCriteria": [
+    "第一屏显示最近交付对象、截止日、状态和可执行入口",
+    "缩略图帮助定位项目，不主导所有项目行",
+    "手机优先展示交付操作，保留可见导航和搜索",
+    "状态变化后最近交付依据当前数据更新"
+  ],
+  "directions": [
+    {
+      "name": "创作交接台",
+      "layout": "横向导航、最近交付与稿件预览、紧凑项目记录、待办日程",
+      "typography": "宋体用于品牌与项目重点；系统黑体用于操作；等宽数字用于进度",
+      "color": "灰紫品牌底、深墨绿操作、朱红截止提示",
+      "taskFit": "将识别最近截止与继续项目连在一起",
+      "tradeoff": "交付重点占空间，需紧凑项目行补偿",
+      "mobileStrategy": "操作置于预览之前；缩小稿件预览；项目与待办顺序排列"
+    }
+  ],
+  "acceptance": [
+    "Primary user action is visible and operable",
+    "Keyboard navigation and visible focus are checked",
+    "Mobile layout avoids unintentional overflow",
+    "Empty, loading, error and success states have explicit behavior"
+  ],
+  "status": "implemented-and-verified",
+  "note": "Directions are provided by the Codex designer, not inferred by a scoring algorithm.",
+  "decision": "自主选择创作交接台，完整设计判断和代价见 DESIGN.md；非用户签署验收。"
+}

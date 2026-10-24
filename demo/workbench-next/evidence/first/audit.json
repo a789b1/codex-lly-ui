@@ -1,0 +1,1343 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-24T00:21:24.346Z",
+  "target": "index.html",
+  "views": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench-next/evidence/first/desktop.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".overview-tail"
+                ],
+                "html": "<span class=\"overview-tail\">先交付，再开启。</span>",
+                "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.39 (foreground color: #69776e, background color: #f7f7fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".brand"
+                ],
+                "html": "<a class=\"brand\" href=\"./index.html\" aria-label=\"序间首页\"><span class=\"brand-mark\" aria-hidden=\"true\">序</span><strong>序间</strong><span class=\"brand-sub\">创作有序，灵感有间。</span></a>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              },
+              {
+                "target": [
+                  "#profile-button"
+                ],
+                "html": "<button class=\"profile\" id=\"profile-button\" aria-label=\"林一的工作室\"><span class=\"avatar\">林</span><span>林一的工作室</span></button>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 创作交接台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--panel": "#fff",
+            "--blue": "#344f48",
+            "--muted": "#586763",
+            "--wash": "#e9e8f1",
+            "--line": "#d9dfdc",
+            "--accent": "#a54130",
+            "--ink": "#263c39",
+            "--bg": "#f7f7fa"
+          },
+          "colors": [
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 107
+            },
+            {
+              "value": "rgb(88, 103, 99)",
+              "count": 51
+            },
+            {
+              "value": "rgb(98, 47, 34)",
+              "count": 7
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 5
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 5
+            },
+            {
+              "value": "rgb(84, 99, 93)",
+              "count": 4
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 4
+            },
+            {
+              "value": "rgb(37, 70, 44)",
+              "count": 3
+            },
+            {
+              "value": "rgb(55, 68, 117)",
+              "count": 3
+            },
+            {
+              "value": "rgb(75, 73, 56)",
+              "count": 3
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 3
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 2
+            },
+            {
+              "value": "rgb(82, 99, 93)",
+              "count": 1
+            },
+            {
+              "value": "rgb(91, 103, 100)",
+              "count": 1
+            },
+            {
+              "value": "rgb(105, 119, 110)",
+              "count": 1
+            },
+            {
+              "value": "rgb(142, 55, 39)",
+              "count": 1
+            },
+            {
+              "value": "rgb(83, 100, 91)",
+              "count": 1
+            },
+            {
+              "value": "rgb(115, 130, 121)",
+              "count": 1
+            },
+            {
+              "value": "rgb(161, 173, 165)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 169
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 4
+            },
+            {
+              "value": "rgb(220, 226, 223)",
+              "count": 4
+            },
+            {
+              "value": "rgb(107, 130, 113)",
+              "count": 4
+            },
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 3
+            },
+            {
+              "value": "rgb(237, 208, 194)",
+              "count": 2
+            },
+            {
+              "value": "rgb(229, 238, 230)",
+              "count": 2
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 2
+            },
+            {
+              "value": "rgb(233, 232, 241)",
+              "count": 1
+            },
+            {
+              "value": "rgb(230, 236, 231)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 249, 245)",
+              "count": 1
+            },
+            {
+              "value": "rgb(249, 250, 247)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(220, 232, 211)",
+              "count": 1
+            },
+            {
+              "value": "rgb(248, 232, 222)",
+              "count": 1
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 1
+            },
+            {
+              "value": "rgb(216, 220, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(228, 225, 213)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 233, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "\"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+              "count": 183
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 8
+            },
+            {
+              "value": "system-ui",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", serif",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", STSong, serif",
+              "count": 2
+            },
+            {
+              "value": "\"Songti SC\", STSong, \"Noto Serif CJK SC\", serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            },
+            {
+              "value": "serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 74
+            },
+            {
+              "value": "11px",
+              "count": 46
+            },
+            {
+              "value": "12px",
+              "count": 43
+            },
+            {
+              "value": "13px",
+              "count": 11
+            },
+            {
+              "value": "10px",
+              "count": 8
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "15px",
+              "count": 4
+            },
+            {
+              "value": "19px",
+              "count": 3
+            },
+            {
+              "value": "40px",
+              "count": 2
+            },
+            {
+              "value": "23px",
+              "count": 1
+            },
+            {
+              "value": "27px",
+              "count": 1
+            },
+            {
+              "value": "44px",
+              "count": 1
+            },
+            {
+              "value": "18px",
+              "count": 1
+            },
+            {
+              "value": "64px",
+              "count": 1
+            },
+            {
+              "value": "8px",
+              "count": 1
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "34px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 12
+            },
+            {
+              "value": "6px",
+              "count": 11
+            },
+            {
+              "value": "10px",
+              "count": 9
+            },
+            {
+              "value": "1px",
+              "count": 8
+            },
+            {
+              "value": "4px",
+              "count": 8
+            },
+            {
+              "value": "5px",
+              "count": 8
+            },
+            {
+              "value": "18px",
+              "count": 8
+            },
+            {
+              "value": "8px",
+              "count": 7
+            },
+            {
+              "value": "2px",
+              "count": 5
+            },
+            {
+              "value": "22px",
+              "count": 4
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "20px",
+              "count": 3
+            },
+            {
+              "value": "24px",
+              "count": 2
+            },
+            {
+              "value": "60px",
+              "count": 1
+            },
+            {
+              "value": "48px",
+              "count": 1
+            },
+            {
+              "value": "40px",
+              "count": 1
+            },
+            {
+              "value": "32px",
+              "count": 1
+            },
+            {
+              "value": "11px",
+              "count": 1
+            },
+            {
+              "value": "26px",
+              "count": 1
+            },
+            {
+              "value": "28px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "把创作，交到下一程。"
+          },
+          {
+            "level": 2,
+            "text": "拾光咖啡"
+          },
+          {
+            "level": 2,
+            "text": "项目档案 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "今天的三件事"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench-next/evidence/first/mobile.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".brand"
+                ],
+                "html": "<a class=\"brand\" href=\"./index.html\" aria-label=\"序间首页\"><span class=\"brand-mark\" aria-hidden=\"true\">序</span><strong>序间</strong><span class=\"brand-sub\">创作有序，灵感有间。</span></a>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodeCount": 1,
+            "nodes": [
+              {
+                "target": [
+                  "#profile-button"
+                ],
+                "html": "<button class=\"profile\" id=\"profile-button\" aria-label=\"林一的工作室\"><span class=\"avatar\">林</span><span>林一的工作室</span></button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              }
+            ]
+          }
+        ],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 创作交接台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--panel": "#fff",
+            "--blue": "#344f48",
+            "--muted": "#586763",
+            "--wash": "#e9e8f1",
+            "--line": "#d9dfdc",
+            "--accent": "#a54130",
+            "--ink": "#263c39",
+            "--bg": "#f7f7fa"
+          },
+          "colors": [
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 105
+            },
+            {
+              "value": "rgb(88, 103, 99)",
+              "count": 49
+            },
+            {
+              "value": "rgb(98, 47, 34)",
+              "count": 7
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 5
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 5
+            },
+            {
+              "value": "rgb(84, 99, 93)",
+              "count": 4
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 4
+            },
+            {
+              "value": "rgb(37, 70, 44)",
+              "count": 3
+            },
+            {
+              "value": "rgb(55, 68, 117)",
+              "count": 3
+            },
+            {
+              "value": "rgb(75, 73, 56)",
+              "count": 3
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 3
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 2
+            },
+            {
+              "value": "rgb(82, 99, 93)",
+              "count": 1
+            },
+            {
+              "value": "rgb(91, 103, 100)",
+              "count": 1
+            },
+            {
+              "value": "rgb(142, 55, 39)",
+              "count": 1
+            },
+            {
+              "value": "rgb(83, 100, 91)",
+              "count": 1
+            },
+            {
+              "value": "rgb(115, 130, 121)",
+              "count": 1
+            },
+            {
+              "value": "rgb(161, 173, 165)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 164
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 4
+            },
+            {
+              "value": "rgb(220, 226, 223)",
+              "count": 4
+            },
+            {
+              "value": "rgb(107, 130, 113)",
+              "count": 4
+            },
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 3
+            },
+            {
+              "value": "rgb(237, 208, 194)",
+              "count": 2
+            },
+            {
+              "value": "rgb(229, 238, 230)",
+              "count": 2
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 2
+            },
+            {
+              "value": "rgb(233, 232, 241)",
+              "count": 1
+            },
+            {
+              "value": "rgb(230, 236, 231)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 249, 245)",
+              "count": 1
+            },
+            {
+              "value": "rgb(249, 250, 247)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(220, 232, 211)",
+              "count": 1
+            },
+            {
+              "value": "rgb(248, 232, 222)",
+              "count": 1
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 1
+            },
+            {
+              "value": "rgb(216, 220, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(228, 225, 213)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 233, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "\"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+              "count": 179
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 8
+            },
+            {
+              "value": "system-ui",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", serif",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", STSong, serif",
+              "count": 2
+            },
+            {
+              "value": "\"Songti SC\", STSong, \"Noto Serif CJK SC\", serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 78
+            },
+            {
+              "value": "11px",
+              "count": 49
+            },
+            {
+              "value": "12px",
+              "count": 29
+            },
+            {
+              "value": "13px",
+              "count": 16
+            },
+            {
+              "value": "10px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 4
+            },
+            {
+              "value": "9px",
+              "count": 4
+            },
+            {
+              "value": "17px",
+              "count": 3
+            },
+            {
+              "value": "20px",
+              "count": 3
+            },
+            {
+              "value": "29px",
+              "count": 2
+            },
+            {
+              "value": "23px",
+              "count": 1
+            },
+            {
+              "value": "35px",
+              "count": 1
+            },
+            {
+              "value": "60px",
+              "count": 1
+            },
+            {
+              "value": "8px",
+              "count": 1
+            },
+            {
+              "value": "34px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "6px",
+              "count": 15
+            },
+            {
+              "value": "10px",
+              "count": 11
+            },
+            {
+              "value": "8px",
+              "count": 10
+            },
+            {
+              "value": "12px",
+              "count": 9
+            },
+            {
+              "value": "1px",
+              "count": 8
+            },
+            {
+              "value": "4px",
+              "count": 8
+            },
+            {
+              "value": "5px",
+              "count": 8
+            },
+            {
+              "value": "20px",
+              "count": 5
+            },
+            {
+              "value": "2px",
+              "count": 5
+            },
+            {
+              "value": "17px",
+              "count": 5
+            },
+            {
+              "value": "4px 13px",
+              "count": 4
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "24px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 1
+            },
+            {
+              "value": "8px 18px",
+              "count": 1
+            },
+            {
+              "value": "26px",
+              "count": 1
+            },
+            {
+              "value": "23px",
+              "count": 1
+            },
+            {
+              "value": "3px",
+              "count": 1
+            },
+            {
+              "value": "14px",
+              "count": 1
+            },
+            {
+              "value": "0px 18px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "把创作，\n交到下一程。"
+          },
+          {
+            "level": 2,
+            "text": "拾光咖啡"
+          },
+          {
+            "level": 2,
+            "text": "项目档案 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "今天的三件事"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    },
+    {
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench-next/evidence/first/tablet.png",
+      "accessibility": {
+        "violations": [
+          {
+            "id": "label-content-name-mismatch",
+            "impact": "serious",
+            "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".brand"
+                ],
+                "html": "<a class=\"brand\" href=\"./index.html\" aria-label=\"序间首页\"><span class=\"brand-mark\" aria-hidden=\"true\">序</span><strong>序间</strong><span class=\"brand-sub\">创作有序，灵感有间。</span></a>",
+                "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodeCount": 1,
+            "nodes": [
+              {
+                "target": [
+                  "#profile-button"
+                ],
+                "html": "<button class=\"profile\" id=\"profile-button\" aria-label=\"林一的工作室\"><span class=\"avatar\">林</span><span>林一的工作室</span></button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              }
+            ]
+          }
+        ],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 创作交接台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--panel": "#fff",
+            "--blue": "#344f48",
+            "--muted": "#586763",
+            "--wash": "#e9e8f1",
+            "--line": "#d9dfdc",
+            "--accent": "#a54130",
+            "--ink": "#263c39",
+            "--bg": "#f7f7fa"
+          },
+          "colors": [
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 106
+            },
+            {
+              "value": "rgb(88, 103, 99)",
+              "count": 49
+            },
+            {
+              "value": "rgb(98, 47, 34)",
+              "count": 7
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 5
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 5
+            },
+            {
+              "value": "rgb(84, 99, 93)",
+              "count": 4
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 4
+            },
+            {
+              "value": "rgb(37, 70, 44)",
+              "count": 3
+            },
+            {
+              "value": "rgb(55, 68, 117)",
+              "count": 3
+            },
+            {
+              "value": "rgb(75, 73, 56)",
+              "count": 3
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 3
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 2
+            },
+            {
+              "value": "rgb(91, 103, 100)",
+              "count": 1
+            },
+            {
+              "value": "rgb(142, 55, 39)",
+              "count": 1
+            },
+            {
+              "value": "rgb(83, 100, 91)",
+              "count": 1
+            },
+            {
+              "value": "rgb(115, 130, 121)",
+              "count": 1
+            },
+            {
+              "value": "rgb(161, 173, 165)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 164
+            },
+            {
+              "value": "rgb(165, 65, 48)",
+              "count": 4
+            },
+            {
+              "value": "rgb(220, 226, 223)",
+              "count": 4
+            },
+            {
+              "value": "rgb(107, 130, 113)",
+              "count": 4
+            },
+            {
+              "value": "rgb(38, 60, 57)",
+              "count": 3
+            },
+            {
+              "value": "rgb(237, 208, 194)",
+              "count": 2
+            },
+            {
+              "value": "rgb(229, 238, 230)",
+              "count": 2
+            },
+            {
+              "value": "rgb(54, 88, 72)",
+              "count": 2
+            },
+            {
+              "value": "rgb(233, 232, 241)",
+              "count": 1
+            },
+            {
+              "value": "rgb(230, 236, 231)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 249, 245)",
+              "count": 1
+            },
+            {
+              "value": "rgb(249, 250, 247)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(220, 232, 211)",
+              "count": 1
+            },
+            {
+              "value": "rgb(248, 232, 222)",
+              "count": 1
+            },
+            {
+              "value": "rgb(140, 63, 41)",
+              "count": 1
+            },
+            {
+              "value": "rgb(216, 220, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(228, 225, 213)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 233, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(91, 92, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "\"PingFang SC\", \"Microsoft YaHei\", system-ui, sans-serif",
+              "count": 178
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 8
+            },
+            {
+              "value": "system-ui",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", serif",
+              "count": 3
+            },
+            {
+              "value": "\"Songti SC\", STSong, serif",
+              "count": 2
+            },
+            {
+              "value": "\"Songti SC\", STSong, \"Noto Serif CJK SC\", serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            },
+            {
+              "value": "serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 74
+            },
+            {
+              "value": "11px",
+              "count": 45
+            },
+            {
+              "value": "12px",
+              "count": 39
+            },
+            {
+              "value": "13px",
+              "count": 11
+            },
+            {
+              "value": "10px",
+              "count": 8
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "19px",
+              "count": 4
+            },
+            {
+              "value": "15px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 2
+            },
+            {
+              "value": "24px",
+              "count": 1
+            },
+            {
+              "value": "36px",
+              "count": 1
+            },
+            {
+              "value": "18px",
+              "count": 1
+            },
+            {
+              "value": "64px",
+              "count": 1
+            },
+            {
+              "value": "8px",
+              "count": 1
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "34px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 13
+            },
+            {
+              "value": "6px",
+              "count": 11
+            },
+            {
+              "value": "10px",
+              "count": 9
+            },
+            {
+              "value": "4px",
+              "count": 9
+            },
+            {
+              "value": "1px",
+              "count": 8
+            },
+            {
+              "value": "5px",
+              "count": 8
+            },
+            {
+              "value": "24px",
+              "count": 7
+            },
+            {
+              "value": "8px",
+              "count": 7
+            },
+            {
+              "value": "2px",
+              "count": 5
+            },
+            {
+              "value": "15px",
+              "count": 4
+            },
+            {
+              "value": "0px 14px",
+              "count": 4
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "20px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 2
+            },
+            {
+              "value": "26px",
+              "count": 2
+            },
+            {
+              "value": "14px",
+              "count": 1
+            },
+            {
+              "value": "30px",
+              "count": 1
+            },
+            {
+              "value": "11px",
+              "count": 1
+            },
+            {
+              "value": "3px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "把创作，交到下一程。"
+          },
+          {
+            "level": 2,
+            "text": "拾光咖啡"
+          },
+          {
+            "level": 2,
+            "text": "项目档案 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "今天的三件事"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "fail"
+    }
+  ],
+  "gate": "fail",
+  "limitations": [
+    "Automated checks do not certify WCAG compliance or judge visual quality.",
+    "Axe incomplete results require manual review.",
+    "Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.",
+    "Reduced-motion is enabled for reproducible screenshots; animation requires a separate review."
+  ]
+}

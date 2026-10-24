@@ -99,3 +99,13 @@ python3 scripts/package.py
 交互工具新增刷新、反向 Tab 和显式结果断言；错误会保留现场，无断言不会被标为通过。
 审计有待复核项时显示 `review`，并保留问题节点；报告可通过 `interactions` 合并真实交互证据。
 详见 [更新记录](CHANGELOG.md) 与 [实际重跑证据](demo/workbench/evidence/plugin-0.4.0-final/report.html)。
+
+
+### 0.5.0：把设计推导用在真实改版上
+
+新增内容优先级、视觉重点、字体角色、手机取舍和代表片段方法，并提供按任务选择结构的参考。
+工具仍为原有 8 个，本版重点是设计工作方式。
+
+[新版序间](demo/workbench-next/README.md) · [设计决策与代价](demo/workbench-next/DESIGN.md) · [前后实图](demo/redesign-comparison-final/directions.html)
+
+![序间 · 创作交接台](demo/workbench-next/evidence/finished/capture.png)

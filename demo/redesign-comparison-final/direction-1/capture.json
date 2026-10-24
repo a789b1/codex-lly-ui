@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction",
+  "createdAt": "2026-10-24T00:24:54.247Z",
+  "ok": true,
+  "gate": "review",
+  "target": "workbench/index.html",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/redesign-comparison-final/direction-1/capture.png",
+  "steps": [],
+  "observed": {
+    "title": "序间 · 独立创作者工作台",
+    "url": "http://127.0.0.1:55007/workbench/index.html",
+    "text": "跳到主要内容\n序间\n独立创作者的工作空间\n林一的工作室\n个人\n工作台\n进行中的项目\n2\n已完成项目\n交付日程\n留一点空间，给好想法。\n\n做少一点，\n做好一点。\n\n林\n林一\n独立设计师\n我的工作空间 / 工作台\n10 月 24 日，星期六\n林\n✳\n今天也给创作留点时间\n让好想法，有序发生。\n\n项目、待办与交付，都在你的节奏里。\n\n新建项目\n在手项目\n3个\n稳步向前\n等待客户反馈\n1个\n给想法一点发酵时间\n本周待交付\n2个\n先把重要的事做好\n本周专注\n\n把「禾野」的故事，\n讲得更动人。\n\n品牌视觉 · 最终方案\n我的项目 4\n项目视图\n全部项目\n进行中\n待反馈\n已完成\n⌘ K\n禾 野\nHERB & EVERYDAY\n品牌视觉\n进行中\n禾野 · 品牌视觉设计\n\n禾野植物研究所\n\n项目进度\n75%\n10 月 25 日 交付\n禾\nsip.\nA LITTLE BREAK, A GOOD DAY\n品牌视觉\n待反馈\n拾光咖啡 · 品牌焕新\n\n拾光咖啡\n\n项目进度\n90%\n10 月 24 日 交付\n拾\nNOVA\nFEEL THE FREQUENCY\n产品设计\n进行中\nNOVA · 音乐社区设计\n\nNOVA 音乐\n\n项目进度\n40%\n10 月 28 日 交付\nN\n山海之间\nBETWEEN MOUNTAINS & SEA\n网站设计\n已完成\n山海之间 · 酒店官网\n\n山海之间精品酒店\n\n项目进度\n100%\n10 月 21 日 已交付\n山\n交付日程\n10 月\n一\n19\n二\n20\n三\n21\n四\n22\n五\n23\n六\n24\n日\n25\n拾光咖啡 · 确认反馈\n\n品牌视觉 · 拾光咖啡\n\n今天\n禾野 · 方案交付\n\n品牌视觉 · 禾野植物研究所\n\n10 月 25 日\nNOVA · 方案交付\n\n产品设计 · NOVA 音乐\n\n10 月 28 日\n\n提前一点，才能从容一点。\n\n今天的小目标\n1/3\n整理本周灵感参考\n发送禾野品牌终稿\n确认拾光咖啡反馈\n\n一件一件来，慢慢也很快。\n\n灵感不打烊\n\n把脑海里的下一件作品，\n变成一个新的开始。\n\n开启一个新项目 ↗\n属于你的工作节奏。\n序间 · 让创作回到创作",
+    "activeElement": "<body>\n<a class=\"skip\" href=\"#main\">跳到主要内容</a>\n<aside class=\"sidebar\" aria-label=\"工作区导航\">\n <a class=\"brand\" href=\"./index.html\" aria-labelledby=\"brand-text\"><span class=\"brand-mark\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i></span><span id=\"brand-text\">序间<span class=\"brand-sub\">独立创作者的工作空间</span></span></a>\n <div class=\"workspace-label\">林一的工作室 <span class=\"workspace-dot\">个人</span></div>\n <nav><button class=\"nav-item active\" data-nav=\"all\" aria-current=\"page\"><span data-icon=\"grid\"><svg viewB"
+  },
+  "consoleErrors": [],
+  "note": "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations."
+}

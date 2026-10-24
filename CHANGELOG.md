@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 — 2026-10-24
+
+- Add a content-first design method and task-specific layout reasoning; no additional inspection tools.
+- Redesign Xujian as a creative handoff workspace: dynamic next delivery, restrained project preview, horizontal navigation, compact project records and role-based typography.
+- Preserve the prior demo and provide actual same-viewport comparisons.
+- Verify desktop/mobile creation, persistence, empty recovery and next-delivery selection after project completion.
+
+
 ## 0.4.0 — 2026-10-24
 
 Based on building and accepting the real Xujian workbench:

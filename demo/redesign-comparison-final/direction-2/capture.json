@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction",
+  "createdAt": "2026-10-24T00:24:55.537Z",
+  "ok": true,
+  "gate": "review",
+  "target": "workbench-next/index.html",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/redesign-comparison-final/direction-2/capture.png",
+  "steps": [],
+  "observed": {
+    "title": "序间 · 创作交接台",
+    "url": "http://127.0.0.1:55007/workbench-next/index.html",
+    "text": "跳到主要内容\n序\n序间\n创作有序，灵感有间。\n工作台\n进行中 2\n已完成\n交付日程\n林一的工作室\n\n工作台 / 2026 年 10 月 24 日 · 星期六\n\n把创作，交到下一程。\n新建项目\n工作概况\n在手\n3个\n待反馈\n1个\n本周待交付\n2个\n下一份交付\n今天交付\n拾光咖啡\n\n品牌焕新\n\n拾光咖啡 / 待反馈\n\n查看反馈阶段\n↗\nPROJECT / 品牌视觉\nsip.\nA LITTLE BREAK, A GOOD DAY\n拾光咖啡\n90%\n\n所有创作，都有来处\n\n项目档案 4\n点击项目查看详情 ↗\n全部\n进行中\n待反馈\n已完成\n禾 野\n品牌视觉\n进行中\n禾野 · 品牌视觉设计\n\n禾野植物研究所\n\n10 月 25 日 交付\nsip.\n品牌视觉\n待反馈\n拾光咖啡 · 品牌焕新\n\n拾光咖啡\n\n10 月 24 日 交付\nNOVA\n产品设计\n进行中\nNOVA · 音乐社区设计\n\nNOVA 音乐\n\n10 月 28 日 交付\n山海之间\n网站设计\n已完成\n山海之间 · 酒店官网\n\n山海之间精品酒店\n\n10 月 21 日 已交付\n今天的三件事\n1/3\n整理本周灵感参考\n发送禾野品牌终稿\n确认拾光咖啡反馈\n\n勾选完成的事项，记录今天的进度。\n\n交付日程\n10 月\n拾光咖啡 · 确认反馈\n\n品牌视觉 · 拾光咖啡\n\n今天\n禾野 · 方案交付\n\n品牌视觉 · 禾野植物研究所\n\n10 月 25 日\nNOVA · 方案交付\n\n产品设计 · NOVA 音乐\n\n10 月 28 日\n开启下一份创作\n序间 / 林一的工作室\n使用说明与数据保存 ↗\n查看上一版 ↗",
+    "activeElement": "<body><a class=\"skip\" href=\"#main\">跳到主要内容</a>\n<header class=\"masthead\"><a class=\"brand\" href=\"./index.html\"><span class=\"brand-mark\" aria-hidden=\"true\">序</span><strong>序间</strong><span class=\"brand-sub\">创作有序，灵感有间。</span></a>\n<nav aria-label=\"工作区\"><button data-nav=\"all\" class=\"nav-item active\" aria-current=\"page\">工作台</button><button data-nav=\"active\" class=\"nav-item\">进行中 <span id=\"nav-count\">2</span></button><button data-nav=\"done\" class=\"nav-item\">已完成</button><button id=\"calendar-nav\" class=\"nav"
+  },
+  "consoleErrors": [],
+  "note": "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations."
+}
