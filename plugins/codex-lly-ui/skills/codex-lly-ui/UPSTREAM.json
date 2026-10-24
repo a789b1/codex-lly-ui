@@ -1,0 +1,123 @@
+{
+  "source": "https://github.com/oil-oil/oil-ui",
+  "commit": "a66a177742fd213608cb99d9a6cfc2f357a65d25",
+  "version": "0.24.2",
+  "license": "MIT",
+  "files": {
+    "SKILL.md": {
+      "upstreamSha256": "4888c32f456907bee509729a92b7e8d6ae9f7b87007be18bdd97b1ba4decaa26",
+      "packagedSha256": "a8fe4de2096e56e4003cc1efb5456a25112e6dd884ad0ea33e2fe4f9065ad477"
+    },
+    "references/style-explorer.md": {
+      "upstreamSha256": "3e2dc3c1c0c0e4544a0b12688490bcf42c04a63339857b06e6dbd2e13dc4e65c",
+      "packagedSha256": "3e2dc3c1c0c0e4544a0b12688490bcf42c04a63339857b06e6dbd2e13dc4e65c"
+    },
+    "references/motion.md": {
+      "upstreamSha256": "d4bb6feb692b86812d459534d1f443c500dbc953ee5273db17108067aab91f76",
+      "packagedSha256": "d4bb6feb692b86812d459534d1f443c500dbc953ee5273db17108067aab91f76"
+    },
+    "references/ux-reviewer.md": {
+      "upstreamSha256": "aafc0753939c06591d5078b066a89d8fe15bc539022b82b9778348a600b119fc",
+      "packagedSha256": "aafc0753939c06591d5078b066a89d8fe15bc539022b82b9778348a600b119fc"
+    },
+    "references/reviewer-manual.md": {
+      "upstreamSha256": "8bd797f2aa8fa01da20226586646185755dab1f6434ccfc39828f2b96771eead",
+      "packagedSha256": "8bd797f2aa8fa01da20226586646185755dab1f6434ccfc39828f2b96771eead"
+    },
+    "references/visual-language.md": {
+      "upstreamSha256": "225f8a04b1cda046dfed56c91877acf29e7069523aa89fa1c8143ca2fa4c70dd",
+      "packagedSha256": "225f8a04b1cda046dfed56c91877acf29e7069523aa89fa1c8143ca2fa4c70dd"
+    },
+    "references/layout-and-viewport.md": {
+      "upstreamSha256": "f7de8794bddbe5a3ba8896970d80f97d3b5ee65a3420ae01cfac6afc5646990b",
+      "packagedSha256": "f7de8794bddbe5a3ba8896970d80f97d3b5ee65a3420ae01cfac6afc5646990b"
+    },
+    "references/visual-review.md": {
+      "upstreamSha256": "b4cd68bb6e1bc512d1d9dc6025ee87ff95352e82ffbe1b13aab1c9f60c7e29ec",
+      "packagedSha256": "b4cd68bb6e1bc512d1d9dc6025ee87ff95352e82ffbe1b13aab1c9f60c7e29ec"
+    },
+    "references/ux-review.md": {
+      "upstreamSha256": "880aa05509aa529d907b3a08c8e2c881d398e1c31679b05b2616b1dc154e5103",
+      "packagedSha256": "880aa05509aa529d907b3a08c8e2c881d398e1c31679b05b2616b1dc154e5103"
+    },
+    "references/media.md": {
+      "upstreamSha256": "fdd8bd81fa9539383263fa65626691c4c2d0d79cec24ddf5b099fe5d198049b2",
+      "packagedSha256": "804b15bc9fa1e43e84a024afaf733a042c78094d035c239cd15d885f65dd784c"
+    },
+    "references/scroll-narrative.md": {
+      "upstreamSha256": "4e91a56335c44da03693e1d4496f5bcbef4e95ff12d4b62fd9d0680d8d12e3a7",
+      "packagedSha256": "4e91a56335c44da03693e1d4496f5bcbef4e95ff12d4b62fd9d0680d8d12e3a7"
+    },
+    "references/direction-persuasion.md": {
+      "upstreamSha256": "511c30fe1330318a01a401024855b86666a07fcdb92a7c647d9a4a03a3b43690",
+      "packagedSha256": "511c30fe1330318a01a401024855b86666a07fcdb92a7c647d9a4a03a3b43690"
+    },
+    "references/play.md": {
+      "upstreamSha256": "affd7d8fd25bfdb2c1fa80b91638520b1fcac8443129b0178c93f29885e1b88f",
+      "packagedSha256": "affd7d8fd25bfdb2c1fa80b91638520b1fcac8443129b0178c93f29885e1b88f"
+    },
+    "references/design-direction.md": {
+      "upstreamSha256": "8e5262da3a653cd2246063dda3311105aef10eeb3128ba358ac06c2597e0d234",
+      "packagedSha256": "8e5262da3a653cd2246063dda3311105aef10eeb3128ba358ac06c2597e0d234"
+    },
+    "references/tools.md": {
+      "upstreamSha256": "64424f1b243ce1dddff21c327810025636435efb7090a049209a53cd1f5307ce",
+      "packagedSha256": "64424f1b243ce1dddff21c327810025636435efb7090a049209a53cd1f5307ce"
+    },
+    "assets/style-explorer.html": {
+      "upstreamSha256": "910bbc6ed3e4a8bf92bd24883ac87b400f346fe146f2deafd8eee2ce38b4962e",
+      "packagedSha256": "e1e556b6258e1923758f1648edcb7d8d27ed189a2fbccc069dd545ffc41fb022"
+    },
+    "assets/logo.png": {
+      "upstreamSha256": "35f58a88e195bf4472e2f0fc795122fb9396464cbb3f0d7a2cb639b6c004f972",
+      "packagedSha256": "ec42a7730d1834b5c78a22a07289fccd37e7a1fdf176001c212bdd0fc99d735b"
+    },
+    "assets/fonts/instrument-serif/InstrumentSerif-Regular.ttf": {
+      "upstreamSha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88",
+      "packagedSha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88"
+    },
+    "assets/fonts/instrument-serif/OFL.txt": {
+      "upstreamSha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "packagedSha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+    },
+    "assets/vendor/alpine.min.js": {
+      "upstreamSha256": "1d8911c7b8a55bd0ceb79896251ca00d575915e2cd4348e8007a850e59ba0dc0",
+      "packagedSha256": "1d8911c7b8a55bd0ceb79896251ca00d575915e2cd4348e8007a850e59ba0dc0"
+    },
+    "scripts/build_explorer.py": {
+      "upstreamSha256": "a48d3cc52a0b273b8cdb84f2d29224c31e22f0e07c0ac0c56119d86f38788dd3",
+      "packagedSha256": "a48d3cc52a0b273b8cdb84f2d29224c31e22f0e07c0ac0c56119d86f38788dd3"
+    },
+    "scripts/chrome.mjs": {
+      "upstreamSha256": "fd4cba106de65517d32df20f6f6756258c92ee09228f14a8bdfb369d1943840c",
+      "packagedSha256": "fd4cba106de65517d32df20f6f6756258c92ee09228f14a8bdfb369d1943840c"
+    },
+    "scripts/shoot.mjs": {
+      "upstreamSha256": "935b610b8e24646916d2c38d7408303273b686f35d235a2b4da4ba8b3df77255",
+      "packagedSha256": "935b610b8e24646916d2c38d7408303273b686f35d235a2b4da4ba8b3df77255"
+    },
+    "scripts/curate-media.mjs": {
+      "upstreamSha256": "2bc60a4bd761b7082ac17d0d3e2d4bc1d4630cf763138e9f3bd291d6ceb3bdf4",
+      "packagedSha256": "2bc60a4bd761b7082ac17d0d3e2d4bc1d4630cf763138e9f3bd291d6ceb3bdf4"
+    },
+    "scripts/prep-image.mjs": {
+      "upstreamSha256": "4cec0a8beb5bdbdaa6c9679bad93bfa53cc875b6b19db945d2f7e80d848ca19a",
+      "packagedSha256": "4cec0a8beb5bdbdaa6c9679bad93bfa53cc875b6b19db945d2f7e80d848ca19a"
+    },
+    "tests/test_build_explorer.py": {
+      "upstreamSha256": "c6487711564830f30e71f3c17037859cc96cd523d617a6ba95f480e322d02606",
+      "packagedSha256": "c6487711564830f30e71f3c17037859cc96cd523d617a6ba95f480e322d02606"
+    }
+  },
+  "changes": [
+    "SKILL.md: Codex identity, host adapter, remove automatic update and paid promotion",
+    "references/media.md: Codex native image generation; no paid fallback",
+    "assets/style-explorer.html and assets/logo.png: Codex LLY UI identity; source credit retained in title and license"
+  ],
+  "excluded": [
+    "paid image integration",
+    "automatic update scripts",
+    "promotion script",
+    "upstream README demonstration images"
+  ]
+}

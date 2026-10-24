@@ -24,3 +24,16 @@ for f in p.rglob('*'):
             target=link.split('#')[0]
             if target: assert (f.parent/target).exists(), (f,link)
 print('PASS: manifests, marketplace, icons, skill references and package paths')
+# Vendored design resources retain source attribution and an integrity manifest.
+import hashlib
+upstream=skill.parent/'UPSTREAM.json'
+u=json.loads(upstream.read_text())
+assert len(u['commit'])==40 and u['license']=='MIT'
+assert (skill.parent/'UPSTREAM-LICENSE').is_file()
+for name,hashes in u['files'].items():
+    f=skill.parent/name
+    assert f.resolve().is_relative_to(skill.parent.resolve())
+    assert hashlib.sha256(f.read_bytes()).hexdigest()==hashes['packagedSha256'], name
+assert not (skill.parent/'scripts/oiloil-image.mjs').exists()
+assert not (skill.parent/'scripts/check_update.sh').exists()
+print('PASS: upstream license, provenance and packaged resource integrity')

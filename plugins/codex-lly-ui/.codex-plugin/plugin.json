@@ -1,7 +1,7 @@
 {
   "name": "codex-lly-ui",
-  "version": "0.5.0",
-  "description": "Independent Codex UI design, real interaction checks, accessibility audits and visual regression.",
+  "version": "0.6.0",
+  "description": "Oil UI design workflow adapted for Codex, real interaction checks, accessibility audits and visual regression.",
   "author": {
     "name": "lly"
   },
@@ -11,7 +11,7 @@
   "interface": {
     "displayName": "Codex LLY UI",
     "shortDescription": "设计探索、无障碍检查与视觉回归",
-    "longDescription": "Codex LLY UI 是独立开发的免费 UI 设计与验收插件，提供设计约束记录、真实候选截图比较、交互实测、多端无障碍审计、像素回归、素材来源记录和离线证据报告。通过 8 个标准 MCP 工具在指定用户工作区运行。需要 Node.js 22.19+ 和 Chrome/Chromium/Edge；生图和网络搜索使用 Codex 原生能力。自动检查不能代替人工视觉判断或完整业务验收。",
+    "longDescription": "Codex LLY UI 是基于 MIT 开源 Oil UI 设计方法适配的免费 Codex 插件，提供设计约束记录、真实候选截图比较、交互实测、多端无障碍审计、像素回归、素材来源记录和离线证据报告。通过 8 个标准 MCP 工具在指定用户工作区运行。需要 Node.js 22.19+ 和 Chrome/Chromium/Edge；生图和网络搜索使用 Codex 原生能力。自动检查不能代替人工视觉判断或完整业务验收。",
     "category": "Developer Tools",
     "capabilities": [],
     "defaultPrompt": [

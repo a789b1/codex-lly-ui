@@ -2,9 +2,9 @@
 
 **从设计决策到可核验的界面交付。**
 
-面向 Codex 的独立 UI 设计与验收插件，维护者 **lly**。围绕目标用户、主操作和真实界面证据工作，提供 8 个本地 MCP 工具。免费，MIT 开源。
+将 Oil UI 成熟设计方法适配到 Codex 的 UI 设计与验收插件，维护者 **lly**。围绕目标用户、主操作和真实界面证据工作，提供 8 个本地 MCP 工具。免费，MIT 开源。
 
-## 我们的产品流程
+## 设计流程
 
 ```text
 设计约束 → 方向比较 → 完整实现 → 交互实测 → 自动审计 → 视觉回归 → 验收报告
@@ -32,7 +32,7 @@ codex plugin marketplace add a789b1/codex-lly-ui
 codex plugin add codex-lly-ui@codex-lly-ui
 ```
 
-在新聊天中选用插件。要求 **Node.js 22.19+** 和 Chrome/Chromium/Edge；可用 `CHROME_PATH` 指定浏览器。发布包已包含服务及依赖，无需 npm 安装、Python、DeepSeek 或付费 UI 技能。
+在新聊天中选用插件。要求 **Node.js 22.19+** 和 Chrome/Chromium/Edge；可用 `CHROME_PATH` 指定浏览器。发布包已包含 MCP 服务及依赖，MCP 工具无需 npm 安装；可交互方案比较需要 Python 3.10+。不依赖 DeepSeek 或付费 UI 技能。
 
 只通过 GitHub 分发，**未提交 OpenAI 官方公共插件目录**。仓库市场安装与官方目录上架是不同渠道。
 
@@ -66,7 +66,7 @@ codex plugin add codex-lly-ui@codex-lly-ui
 - 像素差异反映变化量，不评判设计优劣。动态内容应使用稳定测试数据。
 - 哈希用于发现文件变化，不是第三方认证或电子签名。
 
-## 实际页面案例
+## Codex 实际生成案例（历史版本）
 
 [序间 · 独立创作者工作台](demo/workbench/README.md) 是用本插件完成的可运行中文页面，支持项目创建、状态推进、搜索筛选、待办和刷新恢复。包含三方向比较、真实浏览器交互证据、多视口审计、视觉回归及初稿/完成版验收报告。
 
@@ -89,7 +89,7 @@ python3 scripts/package.py
 
 ## 来源说明
 
-[dsh-oil-ui](https://github.com/oil-oil/dsh-oil-ui) 是需求与同类产品参考。当前版本没有包含其工作台源码、工具参数定义、技能文档、模板、品牌素材或测试文件；这些部分已由本项目独立实现。此前的技能适配原型已被取代。
+本版本基于 [Oil UI](https://github.com/oil-oil/oil-ui) 0.24.2（[DSH 适配版](https://github.com/oil-oil/dsh-oil-ui) 使用的开源设计技能）做 Codex 适配，保留完整设计参考和兼容脚本。版权、固定来源提交与文件哈希见 [上游记录](plugins/codex-lly-ui/skills/codex-lly-ui/UPSTREAM.json) 和 [MIT 许可](plugins/codex-lly-ui/skills/codex-lly-ui/UPSTREAM-LICENSE)。本项目非官方分支；不包含 Pro、DSH 运行时或他人演示作品。现有 8 个 MCP 工具由本项目实现。
 
 标准第三方库包括 MCP SDK、axe-core、Ajv、pngjs 和 pixelmatch，各自保留许可。本项目不是 OpenAI 或 oil-oil 的官方产品。
 
@@ -101,7 +101,7 @@ python3 scripts/package.py
 详见 [更新记录](CHANGELOG.md) 与 [实际重跑证据](demo/workbench/evidence/plugin-0.4.0-final/report.html)。
 
 
-### 0.5.0：把设计推导用在真实改版上
+### 0.5.0 历史尝试（不作为新版设计效果证明）：把设计推导用在真实改版上
 
 新增内容优先级、视觉重点、字体角色、手机取舍和代表片段方法，并提供按任务选择结构的参考。
 工具仍为原有 8 个，本版重点是设计工作方式。
@@ -109,3 +109,9 @@ python3 scripts/package.py
 [新版序间](demo/workbench-next/README.md) · [设计决策与代价](demo/workbench-next/DESIGN.md) · [前后实图](demo/redesign-comparison-final/directions.html)
 
 ![序间 · 创作交接台](demo/workbench-next/evidence/finished/capture.png)
+
+## 0.6.0：回归完整设计方法
+
+保留 Oil UI 的标杆拆解、方向探索、视觉语言、素材、动效和评审流程，增加 Codex 调用适配。随包提供可交互比较页、局部/200% 截图及动效工具；原有 MCP 负责可断言交互与审计。删除自动更新、付费推广及收费生图入口。
+
+[实际作品研究与改动依据](docs/DESIGN-REFERENCES.md)。上面的序间由 Codex 实际生成，但属于此前版本，不能证明 0.6.0 的设计质量；不再用自动审计通过来替代视觉效果。

@@ -1,7 +1,7 @@
 {
   "name": "codex-lly-ui",
-  "version": "0.5.0",
-  "description": "Independent Codex UI design and evidence workbench",
+  "version": "0.6.0",
+  "description": "Oil UI design workflow adapted for Codex and evidence workbench",
   "directories": {
     "doc": "docs",
     "test": "tests"
