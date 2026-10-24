@@ -1,0 +1,36 @@
+{
+  "app": "帧间 / FRAME",
+  "album": "冰岛 · 地貌观察",
+  "exportedAt": "2026-10-24T09:37:28.137Z",
+  "count": 2,
+  "photos": [
+    {
+      "id": "IS-001",
+      "title": "潮线",
+      "category": "海岸",
+      "file": "assets/C10-122459580.jpg",
+      "author": "Daniel Oberhaus",
+      "source": "https://commons.wikimedia.org/wiki/File:Vestrahorn_and_Stokksnes_beach_in_Iceland.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "originalWidth": 5949,
+      "originalHeight": 3971,
+      "description": "退潮之后，山峰倒映在潮湿的黑沙上。",
+      "note": "保留：倒影与山体形成完整对称构图。"
+    },
+    {
+      "id": "IS-003",
+      "title": "落水成雪",
+      "category": "瀑布",
+      "file": "assets/C5-102876858.jpg",
+      "author": "Martyn Smith",
+      "source": "https://commons.wikimedia.org/wiki/File:Skogafoss_in_winter_aerial_view.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "originalWidth": 3927,
+      "originalHeight": 2641,
+      "description": "从上方看，河流在雪原边缘突然坠落。",
+      "note": "保留：冷色雪原与瀑布纵向线条。"
+    }
+  ]
+}

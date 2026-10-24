@@ -1,0 +1,56 @@
+{
+  "project": "帧间 · 真实首屏比较",
+  "round": "01",
+  "lang": "zh",
+  "nativeViewport": "1440x900",
+  "candidates": [
+    {
+      "source": "a.html",
+      "name": "接触印样",
+      "concept": "先比较整组照片，工具退到边缘",
+      "typography": "PingFang SC + monospace",
+      "palette": [
+        "#f1f1ef",
+        "#242524",
+        "#dd563c"
+      ],
+      "traits": [
+        "三列网格",
+        "窄侧栏",
+        "高效扫视"
+      ]
+    },
+    {
+      "source": "b.html",
+      "name": "单张检视",
+      "concept": "把所有注意力交给正在判断的一张照片",
+      "typography": "Songti SC + system sans",
+      "palette": [
+        "#17232d",
+        "#87d9df",
+        "#d4dfe4"
+      ],
+      "traits": [
+        "完整大图",
+        "右侧决策",
+        "底部胶片"
+      ]
+    },
+    {
+      "source": "c.html",
+      "name": "策展墙",
+      "concept": "让整组照片的节奏引导取舍",
+      "typography": "Songti SC + PingFang SC",
+      "palette": [
+        "#f0eef5",
+        "#3d304a",
+        "#7355a0"
+      ],
+      "traits": [
+        "无侧栏",
+        "错落图幅",
+        "图像先行"
+      ]
+    }
+  ]
+}

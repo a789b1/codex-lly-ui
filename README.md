@@ -4,6 +4,14 @@
 
 将 Oil UI 成熟设计方法适配到 Codex 的 UI 设计与验收插件，维护者 **lly**。围绕目标用户、主操作和真实界面证据工作，提供 8 个本地 MCP 工具。免费，MIT 开源。
 
+## 用 v0.6.0 实际做出的页面
+
+**[打开「帧间」选片工作台](https://a789b1.github.io/codex-lly-ui/)** · [三个真实首屏](https://a789b1.github.io/codex-lly-ui/directions/style-explorer.html) · [真实操作录屏](https://a789b1.github.io/codex-lly-ui/evidence/motion/watch.html)
+
+![Codex 实际制作的帧间页面](demo/frame/evidence/finished/desktop.png)
+
+从参考研究、三个方向、完整实现，到独立视觉评审与实际操作验收。可入选、写笔记、刷新恢复并导出 JSON。布局与交互由 Codex 制作，照片为有署名的许可摄影，详见 [完整案例与边界](demo/frame/README.md)。
+
 ## 设计流程
 
 ```text
@@ -19,9 +27,7 @@
 
 机器检查、人工视觉判断与业务流程验收分别记录。自动通过不代表界面好看、全面 WCAG 合规或业务逻辑正确。
 
-![验收报告](docs/images/evidence-report.png)
-
-上图来自实际工具运行，使用正常与故障测试页面展示检查结果，不是客户案例或完整产品设计。
+[工具检查报告示例](docs/images/evidence-report.png) 另供开发者查看，不作为设计成果。
 
 ## 安装
 
@@ -60,9 +66,9 @@ codex plugin add codex-lly-ui@codex-lly-ui
 
 ## 边界
 
-- 比较页展示候选的实际截图，是快照，不是可操作原型。
+- MCP 比较页展示截图；随包的 build_explorer 可嵌入实际 HTML 或本机页面，两者能力不同。
 - 自动审计使用 reduced-motion 便于稳定截图；动效需单独核对。
-- 截图工具支持常见 DOM 点击、填写和键盘操作；复杂手势、视频录制和登录态流程交给用户指定的浏览器工具。
+- 截图工具支持常见 DOM 点击、填写和键盘操作；随包 shoot 提供更多状态/录屏能力；登录态流程交给用户指定的浏览器工具。
 - 像素差异反映变化量，不评判设计优劣。动态内容应使用稳定测试数据。
 - 哈希用于发现文件变化，不是第三方认证或电子签名。
 
@@ -114,4 +120,4 @@ python3 scripts/package.py
 
 保留 Oil UI 的标杆拆解、方向探索、视觉语言、素材、动效和评审流程，增加 Codex 调用适配。随包提供可交互比较页、局部/200% 截图及动效工具；原有 MCP 负责可断言交互与审计。删除自动更新、付费推广及收费生图入口。
 
-[实际作品研究与改动依据](docs/DESIGN-REFERENCES.md)。上面的序间由 Codex 实际生成，但属于此前版本，不能证明 0.6.0 的设计质量；不再用自动审计通过来替代视觉效果。
+[实际作品研究与改动依据](docs/DESIGN-REFERENCES.md)。序间属于此前版本；v0.6.0 的实际结果请看页面顶部的帧间案例，不用自动审计通过代替视觉效果。

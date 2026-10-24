@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction",
+  "createdAt": "2026-10-24T09:43:02.854Z",
+  "ok": true,
+  "gate": "pass",
+  "target": "http://127.0.0.1:4175/",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/frame/evidence/finished/capture.png",
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#pick",
+      "pass": true
+    },
+    {
+      "action": "fill",
+      "selector": "#note",
+      "text": "保留完整倒影，作为这组地貌观察的开篇。",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#save-note",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#next",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#pick",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#previous",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "text",
+      "selector": "#selected-count",
+      "text": "2",
+      "pass": true,
+      "actual": "2"
+    },
+    {
+      "action": "assert",
+      "condition": "value",
+      "selector": "#note",
+      "text": "保留完整倒影，作为这组地貌观察的开篇。",
+      "pass": true,
+      "actual": "保留完整倒影，作为这组地貌观察的开篇。"
+    }
+  ],
+  "observed": {
+    "title": "帧间 FRAME · 冰岛地貌观察",
+    "url": "http://127.0.0.1:4175/",
+    "text": "跳到照片\n帧间\nFRAME\n全部照片 8\n已入选 2\n导出 JSON ↓\n冰岛 · 地貌观察\n\nICELAND / A LANDSCAPE STUDY\n\n⌕\n照片分类\n全部分类\n海岸\n山野\n瀑布\n▦ 总览\n单张检视\n放大 ⛶\n‹\n›\n完整构图\n01 / 08\n海岸\nIS-001\n潮线\n\n退潮之后，山峰倒映在潮湿的黑沙上。\n\n✓ 已入选 · 点击移出\nP\n\n已加入你的选片清单\n\n摄影\nDaniel Oberhaus\n原片尺寸\n5949 × 3971\n许可\nCC BY 4.0 ↗\n查看摄影来源 ↗\n选片笔记 可选\n已保存\n保存笔记\n照片序列 8 张\n✓\n潮线\nIS-001\n✓\n山脊\nIS-002\n落水成雪\nIS-003\n黑沙海岸\nIS-004\n雪中瀑布\nIS-005\n玄武岩\nIS-006\n峡湾远处\nIS-007\n冰河切面\nIS-008\n←→ 切换\nP 入选\n空格 放大\nG 总览\n已保存到此浏览器\n已加入选片",
+    "activeElement": "<body><a class=\"skip\" href=\"#workspace\">跳到照片</a>\n<header class=\"topbar\"><div class=\"brand\"><span class=\"brandmark\" aria-hidden=\"true\"></span><strong>帧间</strong><span>FRAME</span></div><nav aria-label=\"照片范围\"><button id=\"all-tab\" class=\"nav-tab active\" aria-pressed=\"true\">全部照片 <span>8</span></button><button id=\"selected-tab\" class=\"nav-tab\" aria-pressed=\"false\">已入选 <span id=\"selected-count\">2</span></button></nav><div class=\"top-actions\"><button id=\"export\" class=\"outline export\" title=\"下载包含照片来源和笔"
+  },
+  "consoleErrors": [],
+  "note": "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations."
+}

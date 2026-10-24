@@ -1,0 +1,39 @@
+[
+  {
+    "file": "page-1440x900.png",
+    "state": null,
+    "size": "1440x900",
+    "zoom": 1,
+    "animationWaitMs": 0,
+    "issues": [],
+    "lint": [
+      {
+        "rule": "englishLabel",
+        "label": "中文界面里的英文大写标签",
+        "count": 2,
+        "examples": [
+          "p「ICELAND / A LANDSCAPE ST」",
+          "a#photo-license「CC BY 4.0 ↗」"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "page-768x1024.png",
+    "state": null,
+    "size": "768x1024",
+    "zoom": 1,
+    "animationWaitMs": 16,
+    "issues": [],
+    "lint": []
+  },
+  {
+    "file": "page-390x844.png",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 22,
+    "issues": [],
+    "lint": []
+  }
+]

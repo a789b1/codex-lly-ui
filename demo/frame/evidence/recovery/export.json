@@ -1,0 +1,22 @@
+{
+  "app": "帧间 / FRAME",
+  "album": "冰岛 · 地貌观察",
+  "exportedAt": "2026-10-24T09:40:17.336Z",
+  "count": 1,
+  "photos": [
+    {
+      "id": "IS-001",
+      "title": "潮线",
+      "category": "海岸",
+      "file": "assets/C10-122459580.jpg",
+      "author": "Daniel Oberhaus",
+      "source": "https://commons.wikimedia.org/wiki/File:Vestrahorn_and_Stokksnes_beach_in_Iceland.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "originalWidth": 5949,
+      "originalHeight": 3971,
+      "description": "退潮之后，山峰倒映在潮湿的黑沙上。",
+      "note": "保留倒影的完整构图；准备横版"
+    }
+  ]
+}

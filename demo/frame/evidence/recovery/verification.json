@@ -1,0 +1,57 @@
+{
+  "createdAt": "2026-10-24T09:40:26.495Z",
+  "method": "Isolated Chrome; CDP pointer/typing; injected localStorage write failure; actual export Blob inspected",
+  "results": [
+    {
+      "run": 1,
+      "pass": true,
+      "checks": [
+        "fresh state has no selection",
+        "failed selection is not presented as saved",
+        "retry persists selected photo",
+        "failed note remains in input and not storage",
+        "reload restores note and selection",
+        "unsaved note survives photo switching",
+        "export blocks unsaved selected note",
+        "export contains real IDs note and licenses",
+        "mobile thumbnail returns to visible full image",
+        "mobile layout has no horizontal overflow"
+      ],
+      "consoleErrors": []
+    },
+    {
+      "run": 2,
+      "pass": true,
+      "checks": [
+        "fresh state has no selection",
+        "failed selection is not presented as saved",
+        "retry persists selected photo",
+        "failed note remains in input and not storage",
+        "reload restores note and selection",
+        "unsaved note survives photo switching",
+        "export blocks unsaved selected note",
+        "export contains real IDs note and licenses",
+        "mobile thumbnail returns to visible full image",
+        "mobile layout has no horizontal overflow"
+      ],
+      "consoleErrors": []
+    },
+    {
+      "run": 3,
+      "pass": true,
+      "checks": [
+        "fresh state has no selection",
+        "failed selection is not presented as saved",
+        "retry persists selected photo",
+        "failed note remains in input and not storage",
+        "reload restores note and selection",
+        "unsaved note survives photo switching",
+        "export blocks unsaved selected note",
+        "export contains real IDs note and licenses",
+        "mobile thumbnail returns to visible full image",
+        "mobile layout has no horizontal overflow"
+      ],
+      "consoleErrors": []
+    }
+  ]
+}

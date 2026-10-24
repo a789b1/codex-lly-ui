@@ -1,0 +1,964 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-24T09:42:41.809Z",
+  "target": "http://127.0.0.1:4175/",
+  "views": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/frame/evidence/audit-final/desktop.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 5,
+            "nodes": [
+              {
+                "target": [
+                  ".search > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#view-toggle > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">▦</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#expand > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⛶</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > kbd:nth-child(1)"
+                ],
+                "html": "<kbd>←</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > kbd:nth-child(2)"
+                ],
+                "html": "<kbd>→</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodeCount": 2,
+            "nodes": [
+              {
+                "target": [
+                  "#previous"
+                ],
+                "html": "<button id=\"previous\" class=\"arrow previous\" aria-label=\"上一张照片\" disabled=\"\">‹</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              },
+              {
+                "target": [
+                  "#next"
+                ],
+                "html": "<button id=\"next\" class=\"arrow next\" aria-label=\"下一张照片\">›</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              }
+            ]
+          }
+        ],
+        "passes": 28
+      },
+      "dom": {
+        "title": "帧间 FRAME · 冰岛地貌观察",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--muted": "#a8b9c5",
+            "--surface": "#202e39",
+            "--well": "#101b24",
+            "--accent-ink": "#173740",
+            "--line": "#3a4c5a",
+            "--accent": "#b0dadd",
+            "--ink": "#edf2f4",
+            "--ease": "cubic-bezier(.2,.7,.2,1)",
+            "--canvas": "#18232d"
+          },
+          "colors": [
+            {
+              "value": "rgb(237, 242, 244)",
+              "count": 62
+            },
+            {
+              "value": "rgb(168, 185, 197)",
+              "count": 45
+            },
+            {
+              "value": "rgb(213, 223, 229)",
+              "count": 14
+            },
+            {
+              "value": "rgb(23, 55, 64)",
+              "count": 4
+            },
+            {
+              "value": "rgb(225, 240, 241)",
+              "count": 2
+            },
+            {
+              "value": "rgb(197, 212, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(225, 246, 247)",
+              "count": 2
+            },
+            {
+              "value": "rgb(195, 208, 216)",
+              "count": 1
+            },
+            {
+              "value": "rgb(210, 232, 234)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 118
+            },
+            {
+              "value": "rgb(16, 27, 36)",
+              "count": 8
+            },
+            {
+              "value": "rgb(176, 218, 221)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 66, 79)",
+              "count": 1
+            },
+            {
+              "value": "rgb(24, 35, 45)",
+              "count": 1
+            },
+            {
+              "value": "rgb(32, 46, 57)",
+              "count": 1
+            },
+            {
+              "value": "rgb(23, 37, 48)",
+              "count": 1
+            },
+            {
+              "value": "rgb(70, 97, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 110
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 20
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, \"Songti SC\", \"Noto Serif CJK SC\", serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 59
+            },
+            {
+              "value": "12px",
+              "count": 40
+            },
+            {
+              "value": "13px",
+              "count": 12
+            },
+            {
+              "value": "10px",
+              "count": 8
+            },
+            {
+              "value": "11px",
+              "count": 7
+            },
+            {
+              "value": "32px",
+              "count": 2
+            },
+            {
+              "value": "21px",
+              "count": 1
+            },
+            {
+              "value": "26px",
+              "count": 1
+            },
+            {
+              "value": "25px",
+              "count": 1
+            },
+            {
+              "value": "18px",
+              "count": 1
+            },
+            {
+              "value": "28px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "3px",
+              "count": 16
+            },
+            {
+              "value": "5px",
+              "count": 9
+            },
+            {
+              "value": "2px",
+              "count": 6
+            },
+            {
+              "value": "12px",
+              "count": 4
+            },
+            {
+              "value": "15px",
+              "count": 4
+            },
+            {
+              "value": "10px",
+              "count": 4
+            },
+            {
+              "value": "1px",
+              "count": 4
+            },
+            {
+              "value": "6px",
+              "count": 4
+            },
+            {
+              "value": "24px",
+              "count": 3
+            },
+            {
+              "value": "8px",
+              "count": 3
+            },
+            {
+              "value": "32px",
+              "count": 2
+            },
+            {
+              "value": "18px",
+              "count": 2
+            },
+            {
+              "value": "42px",
+              "count": 1
+            },
+            {
+              "value": "22px",
+              "count": 1
+            },
+            {
+              "value": "28px",
+              "count": 1
+            },
+            {
+              "value": "38px",
+              "count": 1
+            },
+            {
+              "value": "54px",
+              "count": 1
+            },
+            {
+              "value": "23px",
+              "count": 1
+            },
+            {
+              "value": "14px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "冰岛 · 地貌观察"
+          },
+          {
+            "level": 2,
+            "text": "潮线"
+          },
+          {
+            "level": 2,
+            "text": "照片序列 8 张"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/frame/evidence/audit-final/mobile.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 3,
+            "nodes": [
+              {
+                "target": [
+                  ".search > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#view-toggle > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">▦</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#expand > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⛶</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodeCount": 2,
+            "nodes": [
+              {
+                "target": [
+                  "#previous"
+                ],
+                "html": "<button id=\"previous\" class=\"arrow previous\" aria-label=\"上一张照片\" disabled=\"\">‹</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              },
+              {
+                "target": [
+                  "#next"
+                ],
+                "html": "<button id=\"next\" class=\"arrow next\" aria-label=\"下一张照片\">›</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              }
+            ]
+          }
+        ],
+        "passes": 27
+      },
+      "dom": {
+        "title": "帧间 FRAME · 冰岛地貌观察",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--muted": "#a8b9c5",
+            "--surface": "#202e39",
+            "--well": "#101b24",
+            "--accent-ink": "#173740",
+            "--line": "#3a4c5a",
+            "--accent": "#b0dadd",
+            "--ink": "#edf2f4",
+            "--ease": "cubic-bezier(.2,.7,.2,1)",
+            "--canvas": "#18232d"
+          },
+          "colors": [
+            {
+              "value": "rgb(237, 242, 244)",
+              "count": 61
+            },
+            {
+              "value": "rgb(168, 185, 197)",
+              "count": 25
+            },
+            {
+              "value": "rgb(213, 223, 229)",
+              "count": 14
+            },
+            {
+              "value": "rgb(23, 55, 64)",
+              "count": 3
+            },
+            {
+              "value": "rgb(197, 212, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(225, 246, 247)",
+              "count": 2
+            },
+            {
+              "value": "rgb(225, 240, 241)",
+              "count": 1
+            },
+            {
+              "value": "rgb(210, 232, 234)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 94
+            },
+            {
+              "value": "rgb(16, 27, 36)",
+              "count": 8
+            },
+            {
+              "value": "rgb(176, 218, 221)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 66, 79)",
+              "count": 1
+            },
+            {
+              "value": "rgb(24, 35, 45)",
+              "count": 1
+            },
+            {
+              "value": "rgb(32, 46, 57)",
+              "count": 1
+            },
+            {
+              "value": "rgb(23, 37, 48)",
+              "count": 1
+            },
+            {
+              "value": "rgb(70, 97, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 101
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 5
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, \"Songti SC\", \"Noto Serif CJK SC\", serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 55
+            },
+            {
+              "value": "11px",
+              "count": 29
+            },
+            {
+              "value": "13px",
+              "count": 9
+            },
+            {
+              "value": "12px",
+              "count": 9
+            },
+            {
+              "value": "18px",
+              "count": 2
+            },
+            {
+              "value": "32px",
+              "count": 2
+            },
+            {
+              "value": "23px",
+              "count": 1
+            },
+            {
+              "value": "25px",
+              "count": 1
+            },
+            {
+              "value": "22px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "3px",
+              "count": 16
+            },
+            {
+              "value": "12px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 4
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "14px",
+              "count": 3
+            },
+            {
+              "value": "10px",
+              "count": 3
+            },
+            {
+              "value": "1px",
+              "count": 3
+            },
+            {
+              "value": "6px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 2
+            },
+            {
+              "value": "18px",
+              "count": 2
+            },
+            {
+              "value": "15px",
+              "count": 2
+            },
+            {
+              "value": "24px",
+              "count": 1
+            },
+            {
+              "value": "7px",
+              "count": 1
+            },
+            {
+              "value": "32px",
+              "count": 1
+            },
+            {
+              "value": "27px",
+              "count": 1
+            },
+            {
+              "value": "0px 12px",
+              "count": 1
+            },
+            {
+              "value": "5px",
+              "count": 1
+            },
+            {
+              "value": "12px 8px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "冰岛 · 地貌观察"
+          },
+          {
+            "level": 2,
+            "text": "潮线"
+          },
+          {
+            "level": 2,
+            "text": "照片序列 8 张"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    },
+    {
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/frame/evidence/audit-final/tablet.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 5,
+            "nodes": [
+              {
+                "target": [
+                  ".search > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⌕</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#view-toggle > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">▦</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "#expand > span[aria-hidden=\"true\"]"
+                ],
+                "html": "<span aria-hidden=\"true\">⛶</span>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > kbd:nth-child(1)"
+                ],
+                "html": "<kbd>←</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > kbd:nth-child(2)"
+                ],
+                "html": "<kbd>→</kbd>",
+                "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+              }
+            ]
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "help": "Elements must have their visible text as part of their accessible name",
+            "nodeCount": 2,
+            "nodes": [
+              {
+                "target": [
+                  "#previous"
+                ],
+                "html": "<button id=\"previous\" class=\"arrow previous\" aria-label=\"上一张照片\" disabled=\"\">‹</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              },
+              {
+                "target": [
+                  "#next"
+                ],
+                "html": "<button id=\"next\" class=\"arrow next\" aria-label=\"下一张照片\">›</button>",
+                "failureSummary": "Fix any of the following:\n  Unable to determine if the visible text is part of the accessible name"
+              }
+            ]
+          }
+        ],
+        "passes": 27
+      },
+      "dom": {
+        "title": "帧间 FRAME · 冰岛地貌观察",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [],
+        "tokens": {
+          "custom": {
+            "--muted": "#a8b9c5",
+            "--surface": "#202e39",
+            "--well": "#101b24",
+            "--accent-ink": "#173740",
+            "--line": "#3a4c5a",
+            "--accent": "#b0dadd",
+            "--ink": "#edf2f4",
+            "--ease": "cubic-bezier(.2,.7,.2,1)",
+            "--canvas": "#18232d"
+          },
+          "colors": [
+            {
+              "value": "rgb(237, 242, 244)",
+              "count": 62
+            },
+            {
+              "value": "rgb(168, 185, 197)",
+              "count": 45
+            },
+            {
+              "value": "rgb(213, 223, 229)",
+              "count": 14
+            },
+            {
+              "value": "rgb(23, 55, 64)",
+              "count": 4
+            },
+            {
+              "value": "rgb(225, 240, 241)",
+              "count": 2
+            },
+            {
+              "value": "rgb(197, 212, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(225, 246, 247)",
+              "count": 2
+            },
+            {
+              "value": "rgb(210, 232, 234)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 117
+            },
+            {
+              "value": "rgb(16, 27, 36)",
+              "count": 8
+            },
+            {
+              "value": "rgb(176, 218, 221)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 66, 79)",
+              "count": 1
+            },
+            {
+              "value": "rgb(24, 35, 45)",
+              "count": 1
+            },
+            {
+              "value": "rgb(32, 46, 57)",
+              "count": 1
+            },
+            {
+              "value": "rgb(23, 37, 48)",
+              "count": 1
+            },
+            {
+              "value": "rgb(70, 97, 109)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 109
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 20
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 2
+            },
+            {
+              "value": "Georgia, \"Songti SC\", \"Noto Serif CJK SC\", serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 58
+            },
+            {
+              "value": "12px",
+              "count": 39
+            },
+            {
+              "value": "13px",
+              "count": 13
+            },
+            {
+              "value": "10px",
+              "count": 9
+            },
+            {
+              "value": "11px",
+              "count": 6
+            },
+            {
+              "value": "32px",
+              "count": 2
+            },
+            {
+              "value": "21px",
+              "count": 1
+            },
+            {
+              "value": "22px",
+              "count": 1
+            },
+            {
+              "value": "25px",
+              "count": 1
+            },
+            {
+              "value": "18px",
+              "count": 1
+            },
+            {
+              "value": "24px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "3px",
+              "count": 16
+            },
+            {
+              "value": "5px",
+              "count": 9
+            },
+            {
+              "value": "2px",
+              "count": 6
+            },
+            {
+              "value": "22px",
+              "count": 5
+            },
+            {
+              "value": "10px",
+              "count": 4
+            },
+            {
+              "value": "12px",
+              "count": 3
+            },
+            {
+              "value": "15px",
+              "count": 3
+            },
+            {
+              "value": "8px",
+              "count": 3
+            },
+            {
+              "value": "1px",
+              "count": 3
+            },
+            {
+              "value": "6px",
+              "count": 3
+            },
+            {
+              "value": "18px",
+              "count": 3
+            },
+            {
+              "value": "14px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 2
+            },
+            {
+              "value": "24px",
+              "count": 1
+            },
+            {
+              "value": "28px",
+              "count": 1
+            },
+            {
+              "value": "34px",
+              "count": 1
+            },
+            {
+              "value": "40px",
+              "count": 1
+            },
+            {
+              "value": "normal 20px",
+              "count": 1
+            },
+            {
+              "value": "14px 12px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "冰岛 · 地貌观察"
+          },
+          {
+            "level": 2,
+            "text": "潮线"
+          },
+          {
+            "level": 2,
+            "text": "照片序列 8 张"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    }
+  ],
+  "gate": "review",
+  "limitations": [
+    "Automated checks do not certify WCAG compliance or judge visual quality.",
+    "Axe incomplete results require manual review.",
+    "Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.",
+    "Reduced-motion is enabled for reproducible screenshots; animation requires a separate review."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction",
+  "createdAt": "2026-10-24T09:41:20.297Z",
+  "ok": true,
+  "gate": "pass",
+  "target": "http://127.0.0.1:4175/",
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/frame/evidence/journey-mobile/capture.png",
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#pick",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "text",
+      "selector": "#selected-count",
+      "text": "1",
+      "pass": true,
+      "actual": "1"
+    },
+    {
+      "action": "click",
+      "selector": "#more-info summary",
+      "pass": true
+    },
+    {
+      "action": "fill",
+      "selector": "#note",
+      "text": "手机上记录：保留山峰倒影。",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#save-note",
+      "pass": true
+    },
+    {
+      "action": "reload",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#more-info summary",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "value",
+      "selector": "#note",
+      "text": "手机上记录：保留山峰倒影。",
+      "pass": true,
+      "actual": "手机上记录：保留山峰倒影。"
+    },
+    {
+      "action": "click",
+      "selector": "#selected-tab",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "count",
+      "selector": ".thumb-open",
+      "count": 1,
+      "pass": true,
+      "actual": 1
+    },
+    {
+      "action": "click",
+      "selector": "#pick",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "visible",
+      "selector": "#empty",
+      "pass": true,
+      "actual": 1
+    },
+    {
+      "action": "assert",
+      "condition": "text",
+      "selector": "#empty-title",
+      "text": "还没有入选照片",
+      "pass": true,
+      "actual": "还没有入选照片"
+    },
+    {
+      "action": "click",
+      "selector": "#reset-filters",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "condition": "count",
+      "selector": ".thumb-open",
+      "count": 8,
+      "pass": true,
+      "actual": 8
+    }
+  ],
+  "observed": {
+    "title": "帧间 FRAME · 冰岛地貌观察",
+    "url": "http://127.0.0.1:4175/",
+    "text": "跳到照片\n帧间\n全部照片 8\n已入选 0\n导出 JSON\n冰岛 · 地貌观察\n⌕\n照片分类\n全部分类\n海岸\n山野\n瀑布\n▦ 总览\n单张检视\n放大 ⛶\n‹\n›\n完整构图\n01 / 08\n海岸\nIS-001\n潮线\n＋ 加入选片\n笔记与摄影信息\n摄影\nDaniel Oberhaus\n原片尺寸\n5949 × 3971\n许可\nCC BY 4.0 ↗\n查看摄影来源 ↗\n选片笔记 可选\n已保存\n保存笔记\n照片序列 8 张\n潮线\n山脊\n落水成雪\n黑沙海岸\n雪中瀑布\n玄武岩\n峡湾远处\n冰河切面\n已保存到此浏览器\n已移出选片",
+    "activeElement": "<button id=\"all-tab\" class=\"nav-tab active\" aria-pressed=\"true\">全部照片 <span>8</span></button>"
+  },
+  "consoleErrors": [],
+  "note": "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations."
+}
