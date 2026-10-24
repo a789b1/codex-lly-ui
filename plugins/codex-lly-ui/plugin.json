@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "codex-lly-ui",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Independent Codex UI design, real interaction checks, accessibility audits and visual regression.",
   "license": "MIT",
   "repository": "https://github.com/a789b1/codex-lly-ui",

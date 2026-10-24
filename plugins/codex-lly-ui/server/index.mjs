@@ -19468,7 +19468,7 @@ async function audit(w, cwd, args, signal) {
       await b.evaluate(`new Promise((resolve,reject)=>{const end=Date.now()+20000;const check=()=>{if(document.readyState==='complete')resolve(true);else if(Date.now()>end)reject(Error('Page load timed out'));else setTimeout(check,50)};check()})`);
       const resourceState = await b.evaluate(`Promise.race([Promise.all([document.fonts.ready,...[...document.images].map(i=>i.complete?Promise.resolve():new Promise(r=>{i.addEventListener('load',r,{once:true});i.addEventListener('error',r,{once:true})}))]).then(()=> 'settled'),new Promise(r=>setTimeout(()=>r('resource-timeout'),10000))])`);
       await b.evaluate(axe);
-      const accessibility = await b.evaluate(`axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>({violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,help:v.help,helpUrl:v.helpUrl,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),incomplete:r.incomplete.map(v=>({id:v.id,help:v.help,nodes:v.nodes.length})),passes:r.passes.length}))`);
+      const accessibility = await b.evaluate(`axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>({violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,help:v.help,helpUrl:v.helpUrl,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),incomplete:r.incomplete.map(v=>({id:v.id,help:v.help,nodeCount:v.nodes.length,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),passes:r.passes.length}))`);
       const dom = await b.evaluate(OBSERVE);
       const image = await b.call("Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
       const screenshot = join2(output, device2 + ".png");
@@ -19482,7 +19482,7 @@ async function audit(w, cwd, args, signal) {
         dom,
         consoleErrors: [...b.errors],
         resourceState,
-        gate: blocking || dom.overflow || dom.brokenImages.length || b.errors.length || resourceState !== "settled" ? "fail" : "pass"
+        gate: blocking || dom.overflow || dom.brokenImages.length || b.errors.length || resourceState !== "settled" ? "fail" : accessibility.violations.length || accessibility.incomplete.length || dom.smallTargets.length ? "review" : "pass"
       });
     }
   } finally {
@@ -19493,7 +19493,7 @@ async function audit(w, cwd, args, signal) {
     createdAt: (/* @__PURE__ */ new Date()).toISOString(),
     target: args.target,
     views,
-    gate: views.some((v) => v.gate === "fail") ? "fail" : "pass",
+    gate: views.some((v) => v.gate === "fail") ? "fail" : views.some((v) => v.gate === "review") ? "review" : "pass",
     limitations: ["Automated checks do not certify WCAG compliance or judge visual quality.", "Axe incomplete results require manual review.", "Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.", "Reduced-motion is enabled for reproducible screenshots; animation requires a separate review."]
   };
   const report = join2(output, "audit.json");
@@ -19510,6 +19510,7 @@ async function capture(w, cwd, args, signal) {
   const b = await browserSession(signal);
   const size = VIEWPORTS[args.device];
   const performed = [];
+  let failure2;
   try {
     await b.call("Emulation.setDeviceMetricsOverride", { ...size, deviceScaleFactor: 1, mobile: args.device === "mobile" });
     const nav = await b.call("Page.navigate", { url });
@@ -19517,29 +19518,50 @@ async function capture(w, cwd, args, signal) {
     await b.waitForLoad(nav.loaderId);
     await b.evaluate("document.fonts.ready.then(()=>true)");
     for (const step of args.steps || []) {
-      if (step.action === "key") {
-        if (!step.key) throw new Error("key is required for a keyboard step");
-        const keys = { Tab: { key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, Enter: { key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 }, Escape: { key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 }, Space: { key: " ", code: "Space", windowsVirtualKeyCode: 32 } };
-        const key = keys[step.key || "Enter"];
-        await b.call("Input.dispatchKeyEvent", { type: "keyDown", ...key });
-        await b.call("Input.dispatchKeyEvent", { type: "keyUp", ...key });
-      } else {
-        if (!step.selector) throw new Error("Selector is required for " + step.action);
-        const selector = JSON.stringify(step.selector);
-        const locate = `(()=>{const nodes=[...document.querySelectorAll(${selector})].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'});if(nodes.length!==1)throw Error('Expected one visible target, found '+nodes.length);return nodes[0]})()`;
-        if (step.action === "waitFor") {
-          await b.evaluate(`new Promise((ok,no)=>{const end=Date.now()+${Math.min(step.timeoutMs || 5e3, 2e4)};const check=()=>{try{const e=${locate};ok(true)}catch{if(Date.now()>end)no(Error('Target did not appear'));else setTimeout(check,50)}};check()})`);
+      try {
+        if (step.action === "reload") {
+          const nav2 = await b.call("Page.navigate", { url });
+          if (nav2.errorText) throw new Error(nav2.errorText);
+          await b.waitForLoad(nav2.loaderId);
+        } else if (step.action === "assert") {
+          if (!step.selector || !step.condition) throw new Error("Assertion requires selector and condition");
+          if (["text", "value"].includes(step.condition) && step.text === void 0) throw new Error("Assertion requires expected text");
+          if (step.condition === "count" && step.count === void 0) throw new Error("Count assertion requires count");
+          const assertion = await b.evaluate(`new Promise(resolve=>{const end=Date.now()+${step.timeoutMs ?? 3e3};const check=()=>{const nodes=[...document.querySelectorAll(${JSON.stringify(step.selector)})];const visible=nodes.filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'});const e=visible[0];const condition=${JSON.stringify(step.condition)};const actual=condition==='count'?nodes.length:condition==='text'?e?.innerText:condition==='value'?e?.value:condition==='focused'?e===document.activeElement:visible.length;const pass=condition==='hidden'?visible.length===0:condition==='visible'?visible.length===1:condition==='count'?actual===${step.count ?? 0}:condition==='focused'?visible.length===1&&actual===true:visible.length===1&&actual===${JSON.stringify(step.text ?? "")};if(pass||Date.now()>=end)resolve({pass,actual});else setTimeout(check,50)};check()})`);
+          performed.push({ ...step, ...assertion });
+          if (!assertion.pass) {
+            failure2 = "Assertion failed at step " + performed.length;
+            break;
+          }
+          continue;
+        } else if (step.action === "key") {
+          if (!step.key) throw new Error("key is required for a keyboard step");
+          const keys = { Tab: { key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 }, Enter: { key: "Enter", code: "Enter", windowsVirtualKeyCode: 13 }, Escape: { key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 }, Space: { key: " ", code: "Space", windowsVirtualKeyCode: 32 } };
+          const key = keys[step.key || "Enter"];
+          await b.call("Input.dispatchKeyEvent", { type: "keyDown", ...key, modifiers: step.shift ? 8 : 0 });
+          await b.call("Input.dispatchKeyEvent", { type: "keyUp", ...key, modifiers: step.shift ? 8 : 0 });
         } else {
-          const point = await b.evaluate(`(()=>{const e=${locate};e.scrollIntoView({block:'center',inline:'center'});e.focus();const r=e.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);
-          if (step.action === "click") {
-            await b.call("Input.dispatchMouseEvent", { type: "mousePressed", button: "left", clickCount: 1, ...point });
-            await b.call("Input.dispatchMouseEvent", { type: "mouseReleased", button: "left", clickCount: 1, ...point });
+          if (!step.selector) throw new Error("Selector is required for " + step.action);
+          const selector = JSON.stringify(step.selector);
+          const locate = `(()=>{const nodes=[...document.querySelectorAll(${selector})].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&getComputedStyle(e).visibility!=='hidden'});if(nodes.length!==1)throw Error('Expected one visible target, found '+nodes.length);return nodes[0]})()`;
+          if (step.action === "waitFor") {
+            await b.evaluate(`new Promise((ok,no)=>{const end=Date.now()+${Math.min(step.timeoutMs || 5e3, 2e4)};const check=()=>{try{const e=${locate};ok(true)}catch{if(Date.now()>end)no(Error('Target did not appear'));else setTimeout(check,50)}};check()})`);
           } else {
-            await b.evaluate(`(()=>{const e=${locate};if(!e.matches('input,textarea'))throw Error('Fill target must be an input or textarea');const setter=Object.getOwnPropertyDescriptor(e.tagName==='INPUT'?HTMLInputElement.prototype:HTMLTextAreaElement.prototype,'value').set;setter.call(e,${JSON.stringify(step.text || "")});e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));return true})()`);
+            const point = await b.evaluate(`(()=>{const e=${locate};e.scrollIntoView({block:'center',inline:'center'});e.focus();const r=e.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);
+            if (step.action === "click") {
+              await b.call("Input.dispatchMouseEvent", { type: "mousePressed", button: "left", clickCount: 1, ...point });
+              await b.call("Input.dispatchMouseEvent", { type: "mouseReleased", button: "left", clickCount: 1, ...point });
+            } else {
+              await b.evaluate(`(()=>{const e=${locate};if(!e.matches('input,textarea'))throw Error('Fill target must be an input or textarea');const setter=Object.getOwnPropertyDescriptor(e.tagName==='INPUT'?HTMLInputElement.prototype:HTMLTextAreaElement.prototype,'value').set;setter.call(e,${JSON.stringify(step.text || "")});e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));return true})()`);
+            }
           }
         }
+        performed.push({ ...step, pass: true });
+      } catch (error2) {
+        failure2 = String(error2);
+        performed.push({ ...step, pass: false, error: failure2 });
+        break;
       }
-      performed.push(step);
     }
     await b.evaluate("new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(true))))");
     const params = { format: "png", captureBeyondViewport: Boolean(args.fullPage) };
@@ -19551,7 +19573,7 @@ async function capture(w, cwd, args, signal) {
     const screenshot = join3(out, "capture.png");
     await writeFile2(screenshot, Buffer.from(image.data, "base64"));
     const observed = await b.evaluate(`({title:document.title,url:location.href,text:document.body.innerText.slice(0,12000),activeElement:document.activeElement?.outerHTML.slice(0,500)})`);
-    const result = { ok: true, target: args.target, device: args.device, viewport: size, screenshot, steps: performed, observed, consoleErrors: [...b.errors], note: "Observed DOM and actual screenshot after the listed actions; this does not prove persistence or backend success." };
+    const result = { schemaVersion: 1, kind: "interaction", createdAt: (/* @__PURE__ */ new Date()).toISOString(), ok: !failure2, gate: failure2 || b.errors.length ? "fail" : performed.some((s) => s.action === "assert") ? "pass" : "review", failure: failure2, target: args.target, device: args.device, viewport: size, screenshot, steps: performed, observed, consoleErrors: [...b.errors], note: "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations." };
     await writeFile2(join3(out, "capture.json"), JSON.stringify(result, null, 2));
     return result;
   } finally {
@@ -19920,7 +19942,7 @@ async function loadAudit(w, cwd, path) {
   const file = await w.scopedPath(cwd, path);
   const bytes = await readFile3(file);
   const a = JSON.parse(bytes.toString("utf8"));
-  if (a.schemaVersion !== 1 || !Array.isArray(a.views) || !a.views.length || !["pass", "fail"].includes(a.gate)) throw new Error("Expected an LLY audit report");
+  if (a.schemaVersion !== 1 || !Array.isArray(a.views) || !a.views.length || !["pass", "fail", "review"].includes(a.gate)) throw new Error("Expected an LLY audit report");
   for (const v of a.views) if (!["desktop", "mobile", "tablet"].includes(v.device) || !v.screenshot || !v.dom || !v.accessibility) throw new Error("Invalid audit viewport");
   return { a, file, bytes };
 }
@@ -19997,8 +20019,19 @@ async function evidenceReport(w, cwd, args) {
       const png = await readFile3(image);
       import_pngjs.PNG.sync.read(png);
       records.push({ path: relative2(cwd, image), sha256: sha256(png), bytes: png.length });
-      cards.push(`<article><div class="meta"><strong>${escape2(a.target)}</strong><span>${escape2(v.device)} \xB7 ${escape2(v.width)} \xD7 ${escape2(v.height)}</span><b class="${v.gate === "pass" ? "pass" : "fail"}">${escape2(v.gate)}</b></div><img alt="${escape2(v.device)} screenshot" src="data:image/png;base64,${png.toString("base64")}"><div class="details"><h2>Accessibility</h2><p>${v.accessibility.violations.length} automatic findings \xB7 ${v.accessibility.incomplete.length} rules need manual review</p>${v.accessibility.violations.map((x) => `<details><summary>${escape2(x.impact)} \xB7 ${escape2(x.help)}</summary><pre>${escape2(JSON.stringify(x.nodes, null, 2))}</pre></details>`).join("")}<h2>Layout & runtime</h2><p>Overflow: ${escape2(v.dom.overflow)} \xB7 Broken images: ${v.dom.brokenImages.length} \xB7 Console errors: ${v.consoleErrors.length}</p><h2>Observed design tokens</h2><pre>${escape2(JSON.stringify(v.dom.tokens, null, 2))}</pre></div></article>`);
+      cards.push(`<article><div class="meta"><strong>${escape2(a.target)}</strong><span>${escape2(v.device)} \xB7 ${escape2(v.width)} \xD7 ${escape2(v.height)}</span><b class="${v.gate === "pass" ? "pass" : "fail"}">${escape2(v.gate)}</b></div><img alt="${escape2(v.device)} screenshot" src="data:image/png;base64,${png.toString("base64")}"><div class="details"><h2>Accessibility</h2><p>${v.accessibility.violations.length} automatic findings \xB7 ${v.accessibility.incomplete.length} rules need manual review</p>${v.accessibility.violations.map((x) => `<details><summary>${escape2(x.impact)} \xB7 ${escape2(x.help)}</summary><pre>${escape2(JSON.stringify(x.nodes, null, 2))}</pre></details>`).join("")}<h2>Needs manual review</h2><pre>${escape2(JSON.stringify(v.accessibility.incomplete, null, 2))}</pre><h2>Layout & runtime</h2><p>Overflow: ${escape2(v.dom.overflow)} \xB7 Broken images: ${v.dom.brokenImages.length} \xB7 Console errors: ${v.consoleErrors.length}</p><h2>Observed design tokens</h2><pre>${escape2(JSON.stringify(v.dom.tokens, null, 2))}</pre></div></article>`);
     }
+  }
+  for (const path of args.interactions || []) {
+    const file = await w.scopedPath(cwd, path);
+    const bytes = await readFile3(file);
+    const data = JSON.parse(bytes.toString());
+    if (data.kind !== "interaction" || data.schemaVersion !== 1 || !Array.isArray(data.steps) || !["pass", "fail", "review"].includes(data.gate)) throw new Error("Expected an LLY interaction capture");
+    const image = await w.scopedPath(cwd, data.screenshot);
+    const png = await readFile3(image);
+    import_pngjs.PNG.sync.read(png);
+    records.push({ path: relative2(cwd, file), sha256: sha256(bytes), bytes: bytes.length }, { path: relative2(cwd, image), sha256: sha256(png), bytes: png.length });
+    cards.push(`<article><div class="meta"><strong>Interaction \xB7 ${escape2(data.target)}</strong><b>${escape2(data.gate)}</b></div><img alt="Interaction result" src="data:image/png;base64,${png.toString("base64")}"><div class="details"><p>${escape2(data.note)}</p><pre>${escape2(JSON.stringify({ steps: data.steps, failure: data.failure, observed: data.observed, consoleErrors: data.consoleErrors }, null, 2))}</pre></div></article>`);
   }
   const title = escape2(args.title || "LLY UI \xB7 Evidence review");
   const html = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'none'; base-uri 'none'"><title>${title}</title><style>*{box-sizing:border-box}body{margin:0;background:#eef4f5;color:#14343b;font:16px/1.6 system-ui,sans-serif}header{padding:48px 5vw;background:#123e45;color:#f9faf7}header small{letter-spacing:.14em;color:#a9d6ce}h1{font-size:clamp(28px,4vw,48px);line-height:1.15;margin:12px 0}header p{max-width:65ch;color:#d1e5e3}main{max-width:1600px;margin:auto;padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:24px}article{background:#fff;border:1px solid #d9dcd4;border-radius:12px;overflow:hidden;align-self:start}.meta{padding:20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}.meta span{color:#626b60}.meta b{margin-left:auto;text-transform:uppercase;font-size:12px;padding:4px 10px;border-radius:20px}.pass{background:#e5f0df;color:#2b5d20}.fail{background:#ffe7dc;color:#923a1c}img{display:block;width:100%;height:auto;border-block:1px solid #e4e6df}.details{padding:24px}h2{font-size:18px;margin:24px 0 8px}details{padding:10px 0;border-bottom:1px solid #e5e6e0}summary{cursor:pointer;min-height:44px}summary:focus-visible{outline:3px solid #136b68;outline-offset:4px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace;background:#f0f5f5;padding:14px;max-height:360px;overflow:auto}footer{padding:24px 5vw;color:#626b60}a{color:inherit}</style><header><small>CODEX LLY UI / VERIFIED ARTIFACTS</small><h1>${title}</h1><p>Actual screenshots, automated accessibility checks and observed tokens. A passing gate is not a visual quality score or a full accessibility certification.</p></header><main>${cards.join("")}</main><footer>Created ${escape2((/* @__PURE__ */ new Date()).toISOString())}. Manual journey and keyboard review remain required. SHA-256 evidence inventory is saved alongside this report.</footer></html>`;
@@ -20019,7 +20052,7 @@ async function designBrief(w, cwd, a) {
   const out = await w.scopedPath(cwd, a.out);
   if (!out.endsWith(".json")) throw new Error("Brief must be saved as JSON");
   await mkdir4(dirname4(out), { recursive: true });
-  const result = { schemaVersion: 1, createdAt: (/* @__PURE__ */ new Date()).toISOString(), goal: a.goal, audience: a.audience, primaryAction: a.primaryAction, constraints: a.constraints, directions: a.directions, acceptance: ["Primary user action is visible and operable", "Keyboard navigation and visible focus are checked", "Mobile layout avoids unintentional overflow", "Empty, loading, error and success states have explicit behavior"], status: "proposed", note: "Directions are provided by the Codex designer, not inferred by a scoring algorithm." };
+  const result = { schemaVersion: 1, createdAt: (/* @__PURE__ */ new Date()).toISOString(), goal: a.goal, audience: a.audience, primaryAction: a.primaryAction, constraints: a.constraints, qualityCriteria: a.qualityCriteria || ["Primary task has a clear reading order and action", "Content density and type remain readable at native size", "Mobile prioritization preserves the primary task", "Visual identity is intentional and consistent"], directions: a.directions, acceptance: ["Primary user action is visible and operable", "Keyboard navigation and visible focus are checked", "Mobile layout avoids unintentional overflow", "Empty, loading, error and success states have explicit behavior"], status: "proposed", note: "Directions are provided by the Codex designer, not inferred by a scoring algorithm." };
   await writeFile4(out, JSON.stringify(result, null, 2), { flag: "wx" });
   return { ok: true, brief: out, ...result };
 }
@@ -20070,22 +20103,22 @@ var str = { type: "string", minLength: 1, maxLength: 12e3 };
 var device = { type: "string", enum: ["desktop", "mobile", "tablet"] };
 var obj = (properties, required2 = []) => ({ type: "object", additionalProperties: false, properties, required: required2 });
 var contract = (properties, required2 = []) => obj({ cwd: { ...str, description: "Absolute user workspace path, never the plugin installation directory" }, ...properties }, ["cwd", ...required2]);
-var direction = obj({ name: str, layout: str, typography: str, color: str }, ["name", "layout", "typography", "color"]);
+var direction = obj({ name: str, layout: str, typography: str, color: str, taskFit: str, tradeoff: str, mobileStrategy: str }, ["name", "layout", "typography", "color"]);
 var schemas = {
   lly_ui_status: contract({}),
-  lly_ui_brief: contract({ goal: str, audience: str, primaryAction: str, constraints: { type: "array", items: str, maxItems: 30 }, directions: { type: "array", items: direction, minItems: 1, maxItems: 4 }, out: str }, ["goal", "audience", "primaryAction", "directions"]),
+  lly_ui_brief: contract({ goal: str, audience: str, primaryAction: str, constraints: { type: "array", items: str, maxItems: 30 }, qualityCriteria: { type: "array", items: str, minItems: 1, maxItems: 12 }, directions: { type: "array", items: direction, minItems: 1, maxItems: 4 }, out: str }, ["goal", "audience", "primaryAction", "directions"]),
   lly_ui_explorer: contract({ candidates: { type: "array", minItems: 2, maxItems: 4, items: obj({ name: str, path: str, reason: str }, ["name", "path", "reason"]) }, device, out: str }, ["candidates"]),
-  lly_ui_capture: contract({ target: str, out: str, device, fullPage: { type: "boolean" }, steps: { type: "array", maxItems: 40, items: obj({ action: { type: "string", enum: ["click", "fill", "key", "waitFor"] }, selector: str, text: { type: "string", maxLength: 12e3 }, key: { type: "string", enum: ["Tab", "Enter", "Escape", "Space"] }, timeoutMs: { type: "integer", minimum: 1, maximum: 2e4 } }, ["action"]) } }, ["target"]),
+  lly_ui_capture: contract({ target: str, out: str, device, fullPage: { type: "boolean" }, steps: { type: "array", maxItems: 40, items: obj({ action: { type: "string", enum: ["click", "fill", "key", "waitFor", "reload", "assert"] }, condition: { type: "string", enum: ["visible", "hidden", "text", "value", "focused", "count"] }, count: { type: "integer", minimum: 0 }, shift: { type: "boolean" }, selector: str, text: { type: "string", maxLength: 12e3 }, key: { type: "string", enum: ["Tab", "Enter", "Escape", "Space"] }, timeoutMs: { type: "integer", minimum: 1, maximum: 2e4 } }, ["action"]) } }, ["target"]),
   lly_ui_audit: contract({ target: str, out: str, devices: { type: "array", items: device, minItems: 1, maxItems: 3, uniqueItems: true } }, ["target"]),
   lly_ui_baseline: contract({ action: { type: "string", enum: ["capture", "compare"] }, audit: str, baseline: str, maxChangedRatio: { type: "number", minimum: 0, maximum: 1 }, pixelThreshold: { type: "number", minimum: 0, maximum: 1 }, out: str, overwrite: { type: "boolean" } }, ["action", "audit", "baseline"]),
-  lly_ui_report: contract({ audits: { type: "array", items: str, minItems: 1, maxItems: 20 }, out: str, title: str }, ["audits"]),
+  lly_ui_report: contract({ audits: { type: "array", items: str, minItems: 1, maxItems: 20 }, out: str, title: str, interactions: { type: "array", items: str, maxItems: 20 } }, ["audits"]),
   lly_ui_assets: contract({ file: str, sourceURL: str, license: str, attribution: str, out: str }, ["file", "sourceURL", "license", "attribution"])
 };
 var descriptions = {
   lly_ui_status: "Read-only local readiness check. Reports actual browser and Node availability; no network, updates or credential access.",
   lly_ui_brief: "Record the designer-provided goal, audience, primary action, constraints and distinct direction cards. Validates structural alternatives and writes a new brief file.",
   lly_ui_explorer: "Render 2\u20134 local candidate pages into actual screenshots and build a standalone comparison with selection and actual-size inspection. Snapshot comparison, not an interactive prototype.",
-  lly_ui_capture: "Operate a page through click/fill/key/waitFor steps, capture a screenshot, and return observed DOM text and focus. Does not infer business success from a click.",
+  lly_ui_capture: "Operate a page through click/fill/key/waitFor/reload/assert steps (visible, hidden, exact text/value, focused, count); failed assertions stop and save evidence, capture a screenshot, and return observed DOM text and focus. Does not infer business success from a click.",
   lly_ui_audit: "Run axe accessibility checks and desktop/mobile/tablet screenshots, overflow, broken-image and runtime checks; extract observed design tokens. Automated evidence, not WCAG certification.",
   lly_ui_baseline: "Save an explicit accepted baseline or compare an audit against it using SHA-256 integrity checks, pixel diff PNGs and per-viewport thresholds. Replacing a baseline requires overwrite=true.",
   lly_ui_report: "Build an offline visual report from existing audits and screenshots with findings, tokens and SHA-256 inventory. Never fabricates manual-review results.",
@@ -20121,7 +20154,7 @@ var CodexRuntime = class {
     const run = () => `lly-evidence/${Date.now()}-${randomUUID().slice(0, 8)}`;
     switch (name) {
       case "lly_ui_status":
-        return { ok: true, plugin: "codex-lly-ui", version: "0.3.0", node: process.version, cwd, browser: findBrowser(), readyForAudit: Boolean(findBrowser()), tools: tools.map((t) => t.name), imageGeneration: "Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs." };
+        return { ok: true, plugin: "codex-lly-ui", version: "0.4.0", node: process.version, cwd, browser: findBrowser(), readyForAudit: Boolean(findBrowser()), tools: tools.map((t) => t.name), imageGeneration: "Use the Codex native image tool; this plugin does not access image-service credentials or payment APIs." };
       case "lly_ui_brief":
         return designBrief(this.workspace, cwd, { ...a, constraints: a.constraints || [], out: a.out || "lly-design-brief.json" });
       case "lly_ui_explorer":
@@ -20136,7 +20169,7 @@ var CodexRuntime = class {
       case "lly_ui_baseline":
         return baseline(this.workspace, cwd, a);
       case "lly_ui_report":
-        return evidenceReport(this.workspace, cwd, { audits: a.audits, out: a.out || `lly-review-${Date.now()}.html`, title: a.title });
+        return evidenceReport(this.workspace, cwd, { audits: a.audits, out: a.out || `lly-review-${Date.now()}.html`, title: a.title, interactions: a.interactions });
       case "lly_ui_assets":
         return assetRecord(this.workspace, cwd, { ...a, out: a.out || "lly-assets.json" });
     }
@@ -20148,7 +20181,7 @@ var CodexRuntime = class {
 
 // src/server.ts
 var runtime = new CodexRuntime();
-var server = new Server({ name: "codex-lly-ui", version: "0.3.0" }, { capabilities: { tools: {} } });
+var server = new Server({ name: "codex-lly-ui", version: "0.4.0" }, { capabilities: { tools: {} } });
 server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools }));
 server.setRequestHandler(CallToolRequestSchema, async (request, extra) => {
   try {

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "evidence/plugin-0.4.0-final/audit/audit.json",
+      "sha256": "764ec5935a6117cb0e7e8dcffbd481dd07f4b871e63552513a3b304b408e715e",
+      "bytes": 35171
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/audit/desktop.png",
+      "sha256": "a50b56539e683e2da1f9dff86923200f72c503c161d588d1a0b3bd23d25f0796",
+      "bytes": 152165
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/audit/mobile.png",
+      "sha256": "b57a4a22adf6821a5944351648588442e3fdc2bc63175b13030f6b5d7ba35a6b",
+      "bytes": 49843
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/audit/tablet.png",
+      "sha256": "02f1584b59f89ea3efd74035dfd032cd54423341057102cfc008d9110519f58c",
+      "bytes": 97447
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/desktop/capture.json",
+      "sha256": "4dc41cd73303021e5e36173e92d78b7ebea1fab9bdb8274206cb4f203dfeca59",
+      "bytes": 4281
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/desktop/capture.png",
+      "sha256": "56f54c06a1a095d96699690d53b5f9189babf9febf01bd47e00ca3a2a3dc2c60",
+      "bytes": 135879
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/mobile/capture.json",
+      "sha256": "fb54d5df669587c6acd1dffaf391bf07c2b59027ed1faa5285fc868c91977a3b",
+      "bytes": 3712
+    },
+    {
+      "path": "evidence/plugin-0.4.0-final/mobile/capture.png",
+      "sha256": "4903b38cf0099637ea64ffa737bbe76350dd3a0abc3f250a900e61b36d33762f",
+      "bytes": 53084
+    }
+  ],
+  "report": {
+    "path": "evidence/plugin-0.4.0-final/report.html",
+    "sha256": "af595e342ca3ef41824dd93c4af526f726b6372eafd90649257dd203b0525443"
+  }
+}

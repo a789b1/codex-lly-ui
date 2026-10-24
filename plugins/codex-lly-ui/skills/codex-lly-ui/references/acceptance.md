@@ -4,7 +4,7 @@
 
 ## 自动检测
 
-审计至少覆盖目标桌面和手机尺寸，必要时加平板。检查 axe violations 与 incomplete；critical/serious、意外横向溢出、断图、运行时错误和资源超时会导致 gate=fail。中低严重度结果也需阅读，不能因为 gate=pass 就忽略。
+审计至少覆盖目标桌面和手机尺寸，必要时加平板。检查 axe violations 与 incomplete；critical/serious、意外横向溢出、断图、运行时错误和资源超时会导致 gate=fail。中低严重度违规、incomplete 或小点击目标会标记 gate=review，不能报告为全部通过。review 是未完成的复核，不是失败也不是合格认证。
 
 审计默认开启 reduced-motion 以稳定截图。动画与滚动体验要另外观察，不能从审计静态图推断通过。
 
@@ -31,6 +31,8 @@ capture 保存基线时应使用用户认可的版本。compare 先核验基线�
 
 ## 报告
 
-只使用真实 audit.json 和对应截图。报告展示自动结果、实际画面与观察到的变量，附 SHA-256 文件清单。哈希用于发现文件改变，不是第三方认证或电子签名。
+使用真实 audit.json、对应截图，以及 interactions 中的 capture.json。capture 的 assert 支持 visible、hidden、text（精确匹配）、value、focused、count（含隐藏 DOM 节点）；不写断言只能得到 review。reload 后检查保存结果，shift=true 的 Tab 检查反向焦点。每个 capture 使用全新隔离会话，跨调用不保留登录或数据。
+
+外部浏览器做的故障注入和人工判断仍需独立记录，不能伪装成插件自动断言。报告展示自动结果、实际画面与观察到的变量，附 SHA-256 文件清单。哈希用于发现文件改变，不是第三方认证或电子签名。
 
 交付中说明没有做的检查。不要把编写好的测试脚本称为已执行，也不要把自动无障碍检查称为全面 WCAG 合规认证。

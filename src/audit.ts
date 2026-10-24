@@ -55,16 +55,16 @@ export async function audit(w: Workspace, cwd: string, args: {target:string;out:
       await b.evaluate(`new Promise((resolve,reject)=>{const end=Date.now()+20000;const check=()=>{if(document.readyState==='complete')resolve(true);else if(Date.now()>end)reject(Error('Page load timed out'));else setTimeout(check,50)};check()})`);
       const resourceState=await b.evaluate(`Promise.race([Promise.all([document.fonts.ready,...[...document.images].map(i=>i.complete?Promise.resolve():new Promise(r=>{i.addEventListener('load',r,{once:true});i.addEventListener('error',r,{once:true})}))]).then(()=> 'settled'),new Promise(r=>setTimeout(()=>r('resource-timeout'),10000))])`);
       await b.evaluate(axe);
-      const accessibility=await b.evaluate(`axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>({violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,help:v.help,helpUrl:v.helpUrl,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),incomplete:r.incomplete.map(v=>({id:v.id,help:v.help,nodes:v.nodes.length})),passes:r.passes.length}))`);
+      const accessibility=await b.evaluate(`axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>({violations:r.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,help:v.help,helpUrl:v.helpUrl,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),incomplete:r.incomplete.map(v=>({id:v.id,help:v.help,nodeCount:v.nodes.length,nodes:v.nodes.slice(0,30).map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary}))})),passes:r.passes.length}))`);
       const dom=await b.evaluate(OBSERVE);
       const image=await b.call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
       const screenshot=join(output,device+'.png');await writeFile(screenshot,Buffer.from(image.data,'base64'));
       const blocking=accessibility.violations.filter((v:any)=>['critical','serious'].includes(v.impact)).length;
       views.push({device,...size,screenshot,accessibility,dom,consoleErrors:[...b.errors],resourceState,
-        gate: blocking||dom.overflow||dom.brokenImages.length||b.errors.length||resourceState!=='settled' ? 'fail':'pass'});
+        gate: blocking||dom.overflow||dom.brokenImages.length||b.errors.length||resourceState!=='settled' ? 'fail':accessibility.violations.length||accessibility.incomplete.length||dom.smallTargets.length?'review':'pass'});
     }
   } finally { await b.close(); }
-  const result={schemaVersion:1,createdAt:new Date().toISOString(),target:args.target,views,gate:views.some(v=>v.gate==='fail')?'fail':'pass',
+  const result={schemaVersion:1,createdAt:new Date().toISOString(),target:args.target,views,gate:views.some(v=>v.gate==='fail')?'fail':views.some(v=>v.gate==='review')?'review':'pass',
     limitations:['Automated checks do not certify WCAG compliance or judge visual quality.','Axe incomplete results require manual review.','Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.','Reduced-motion is enabled for reproducible screenshots; animation requires a separate review.']};
   const report=join(output,'audit.json');await writeFile(report,JSON.stringify(result,null,2));
   return {...result,report};

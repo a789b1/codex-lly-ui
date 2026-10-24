@@ -21,3 +21,11 @@ it('fails missing viewport comparisons instead of skipping them',async()=>{const
 it('embeds real evidence, escapes text and records hashes',async()=>{const {cwd,r}=await setup();await fixture(cwd);const x=await r.invoke('lly_ui_report',{cwd,audits:['audit.json'],title:'<script>unsafe</script>',out:'review.html'});const html=await readFile(x.report,'utf8');expect(html).toContain('data:image/png;base64,');expect(html).toContain('&lt;script&gt;');expect(html).not.toContain('<script>unsafe');const ledger=JSON.parse(await readFile(x.manifest,'utf8'));expect(ledger.files).toHaveLength(2);expect(ledger.report.sha256).toHaveLength(64);});
 it('refuses non-audit files and report outputs that are not HTML',async()=>{const {cwd,r}=await setup();await writeFile(join(cwd,'wrong.json'),'{}');await expect(r.invoke('lly_ui_report',{cwd,audits:['wrong.json']})).rejects.toThrow('audit');await fixture(cwd);await expect(r.invoke('lly_ui_report',{cwd,audits:['audit.json'],out:'audit.json'})).rejects.toThrow('HTML');});
 it('refuses to reuse evidence directories',async()=>{const {cwd,r}=await setup();await mkdir(join(cwd,'existing'));await expect(r.invoke('lly_ui_audit',{cwd,target:'index.html',out:'existing'})).rejects.toThrow();});
+it('reports review findings with actionable nodes and rejects unrelated interaction JSON',async()=>{
+ const {cwd,r}=await setup();await fixture(cwd);
+ const a=JSON.parse(await readFile(join(cwd,'audit.json'),'utf8'));a.gate='review';a.views[0].gate='review';a.views[0].accessibility.incomplete=[{id:'color-contrast',nodes:[{target:['.cover-title'],html:'<span>Brand</span>'}]}];
+ await writeFile(join(cwd,'audit.json'),JSON.stringify(a));
+ const result=await r.invoke('lly_ui_report',{cwd,audits:['audit.json']});
+ expect(await readFile(result.report,'utf8')).toContain('.cover-title');
+ await expect(r.invoke('lly_ui_report',{cwd,audits:['audit.json'],interactions:['audit.json']})).rejects.toThrow('interaction capture');
+});

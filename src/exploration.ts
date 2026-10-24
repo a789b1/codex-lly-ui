@@ -4,13 +4,13 @@ import {Workspace} from './workspace.ts';
 import {capture} from './capture.ts';
 import type {Device} from './audit.ts';
 export const escapeHTML=(v:unknown)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-export async function designBrief(w:Workspace,cwd:string,a:{goal:string;audience:string;primaryAction:string;constraints:string[];directions:{name:string;layout:string;typography:string;color:string}[];out:string}){
+export async function designBrief(w:Workspace,cwd:string,a:{goal:string;audience:string;primaryAction:string;constraints:string[];qualityCriteria?:string[];directions:{name:string;layout:string;typography:string;color:string}[];out:string}){
  const names=a.directions.map(d=>d.name.trim().toLowerCase());
  if(new Set(names).size!==names.length)throw new Error('Direction names must be distinct');
  if(new Set(a.directions.map(d=>d.layout.trim().toLowerCase())).size!==a.directions.length)throw new Error('Directions must differ in layout, not just their names');
  const out=await w.scopedPath(cwd,a.out);if(!out.endsWith('.json'))throw new Error('Brief must be saved as JSON');
  await mkdir(dirname(out),{recursive:true});
- const result={schemaVersion:1,createdAt:new Date().toISOString(),goal:a.goal,audience:a.audience,primaryAction:a.primaryAction,constraints:a.constraints,directions:a.directions,acceptance:['Primary user action is visible and operable','Keyboard navigation and visible focus are checked','Mobile layout avoids unintentional overflow','Empty, loading, error and success states have explicit behavior'],status:'proposed',note:'Directions are provided by the Codex designer, not inferred by a scoring algorithm.'};
+ const result={schemaVersion:1,createdAt:new Date().toISOString(),goal:a.goal,audience:a.audience,primaryAction:a.primaryAction,constraints:a.constraints,qualityCriteria:a.qualityCriteria||['Primary task has a clear reading order and action','Content density and type remain readable at native size','Mobile prioritization preserves the primary task','Visual identity is intentional and consistent'],directions:a.directions,acceptance:['Primary user action is visible and operable','Keyboard navigation and visible focus are checked','Mobile layout avoids unintentional overflow','Empty, loading, error and success states have explicit behavior'],status:'proposed',note:'Directions are provided by the Codex designer, not inferred by a scoring algorithm.'};
  await writeFile(out,JSON.stringify(result,null,2),{flag:'wx'});return {ok:true,brief:out,...result};
 }
 export async function exploration(w:Workspace,cwd:string,a:{candidates:{name:string;path:string;reason:string}[];device:Device;out:string},signal?:AbortSignal){

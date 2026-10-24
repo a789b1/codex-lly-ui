@@ -1,0 +1,1369 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-24T00:10:14.911Z",
+  "target": "index.html",
+  "views": [
+    {
+      "device": "desktop",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/plugin-0.4.0-final/audit/desktop.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 6,
+            "nodes": [
+              {
+                "target": [
+                  "#review-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "#due-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > b"
+                ],
+                "html": "<b>禾 野</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > small"
+                ],
+                "html": "<small>HERB &amp; EVERYDAY</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > b"
+                ],
+                "html": "<b>山海之间</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > small"
+                ],
+                "html": "<small>BETWEEN MOUNTAINS &amp; SEA</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ],
+        "passes": 24
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(88, 102, 126)",
+              "count": 130
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 110
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(45, 77, 188)",
+              "count": 7
+            },
+            {
+              "value": "rgb(44, 70, 153)",
+              "count": 4
+            },
+            {
+              "value": "rgb(47, 81, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(78, 73, 62)",
+              "count": 4
+            },
+            {
+              "value": "rgb(82, 96, 120)",
+              "count": 3
+            },
+            {
+              "value": "rgb(138, 99, 38)",
+              "count": 3
+            },
+            {
+              "value": "rgb(0, 0, 0)",
+              "count": 3
+            },
+            {
+              "value": "rgb(70, 91, 149)",
+              "count": 2
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 2
+            },
+            {
+              "value": "rgb(76, 99, 164)",
+              "count": 2
+            },
+            {
+              "value": "rgb(138, 90, 17)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 105, 66)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 89, 171)",
+              "count": 2
+            },
+            {
+              "value": "rgb(83, 97, 122)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 236
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 18
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 6
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 2
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(240, 242, 246)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 238, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 237, 247)",
+              "count": 1
+            },
+            {
+              "value": "rgba(233, 238, 255, 0.6)",
+              "count": 1
+            },
+            {
+              "value": "rgba(243, 245, 252, 0.6)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 302
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "12px",
+              "count": 139
+            },
+            {
+              "value": "14px",
+              "count": 119
+            },
+            {
+              "value": "13px",
+              "count": 22
+            },
+            {
+              "value": "25px",
+              "count": 7
+            },
+            {
+              "value": "29px",
+              "count": 5
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 3
+            },
+            {
+              "value": "10px",
+              "count": 2
+            },
+            {
+              "value": "17px",
+              "count": 2
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 21
+            },
+            {
+              "value": "5px",
+              "count": 13
+            },
+            {
+              "value": "6px",
+              "count": 13
+            },
+            {
+              "value": "7px",
+              "count": 13
+            },
+            {
+              "value": "8px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "24px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "20px",
+              "count": 5
+            },
+            {
+              "value": "4px",
+              "count": 5
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 5
+            },
+            {
+              "value": "3px",
+              "count": 5
+            },
+            {
+              "value": "14px",
+              "count": 4
+            },
+            {
+              "value": "10px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "36px",
+              "count": 2
+            },
+            {
+              "value": "17px",
+              "count": 2
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    },
+    {
+      "device": "mobile",
+      "width": 390,
+      "height": 844,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/plugin-0.4.0-final/audit/mobile.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 6,
+            "nodes": [
+              {
+                "target": [
+                  "#review-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "#due-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > b"
+                ],
+                "html": "<b>禾 野</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > small"
+                ],
+                "html": "<small>HERB &amp; EVERYDAY</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > b"
+                ],
+                "html": "<b>山海之间</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > small"
+                ],
+                "html": "<small>BETWEEN MOUNTAINS &amp; SEA</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ],
+        "passes": 24
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 99
+            },
+            {
+              "value": "rgb(88, 102, 126)",
+              "count": 95
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(47, 81, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(78, 73, 62)",
+              "count": 4
+            },
+            {
+              "value": "rgb(82, 96, 120)",
+              "count": 3
+            },
+            {
+              "value": "rgb(138, 99, 38)",
+              "count": 3
+            },
+            {
+              "value": "rgb(0, 0, 0)",
+              "count": 3
+            },
+            {
+              "value": "rgb(138, 90, 17)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 105, 66)",
+              "count": 2
+            },
+            {
+              "value": "rgb(70, 91, 149)",
+              "count": 1
+            },
+            {
+              "value": "rgb(73, 84, 107)",
+              "count": 1
+            },
+            {
+              "value": "rgb(167, 118, 39)",
+              "count": 1
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 1
+            },
+            {
+              "value": "rgb(50, 74, 149)",
+              "count": 1
+            },
+            {
+              "value": "rgb(54, 68, 98)",
+              "count": 1
+            },
+            {
+              "value": "rgb(220, 229, 255)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 180
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 17
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 5
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 1
+            },
+            {
+              "value": "rgb(244, 246, 250)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 237, 244)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 239, 223)",
+              "count": 1
+            },
+            {
+              "value": "rgb(241, 185, 160)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 241, 218)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 236
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "14px",
+              "count": 103
+            },
+            {
+              "value": "12px",
+              "count": 103
+            },
+            {
+              "value": "23px",
+              "count": 7
+            },
+            {
+              "value": "13px",
+              "count": 7
+            },
+            {
+              "value": "16px",
+              "count": 6
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "27px",
+              "count": 3
+            },
+            {
+              "value": "34px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "15px",
+              "count": 1
+            },
+            {
+              "value": "10px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "7px",
+              "count": 17
+            },
+            {
+              "value": "12px",
+              "count": 13
+            },
+            {
+              "value": "6px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 9
+            },
+            {
+              "value": "5px",
+              "count": 9
+            },
+            {
+              "value": "20px",
+              "count": 8
+            },
+            {
+              "value": "8px",
+              "count": 8
+            },
+            {
+              "value": "3px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 4
+            },
+            {
+              "value": "4px",
+              "count": 4
+            },
+            {
+              "value": "10px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "15px",
+              "count": 2
+            },
+            {
+              "value": "22px",
+              "count": 2
+            },
+            {
+              "value": "17px",
+              "count": 1
+            },
+            {
+              "value": "24px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    },
+    {
+      "device": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/plugin-0.4.0-final/audit/tablet.png",
+      "accessibility": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "nodeCount": 6,
+            "nodes": [
+              {
+                "target": [
+                  "#review-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "#due-count > small"
+                ],
+                "html": "<small>个</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > b"
+                ],
+                "html": "<b>禾 野</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-green > .cover-title > small"
+                ],
+                "html": "<small>HERB &amp; EVERYDAY</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > b"
+                ],
+                "html": "<b>山海之间</b>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  ".cover-sand > .cover-title > small"
+                ],
+                "html": "<small>BETWEEN MOUNTAINS &amp; SEA</small>",
+                "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ],
+        "passes": 23
+      },
+      "dom": {
+        "title": "序间 · 独立创作者工作台",
+        "lang": "zh-CN",
+        "overflow": false,
+        "overflowElements": [],
+        "brokenImages": [],
+        "smallTargets": [
+          {
+            "tag": "A",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": ""
+          }
+        ],
+        "tokens": {
+          "custom": {
+            "--space": "24px",
+            "--blue-soft": "#e9eeff",
+            "--panel": "#fff",
+            "--blue": "#3658d4",
+            "--muted": "#68738a",
+            "--coral": "#9e482c",
+            "--green": "#226847",
+            "--line": "#e5e9f1",
+            "--ink": "#202b44",
+            "--bg": "#f4f6fa",
+            "--radius": "14px"
+          },
+          "colors": [
+            {
+              "value": "rgb(88, 102, 126)",
+              "count": 117
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 99
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 8
+            },
+            {
+              "value": "rgb(45, 77, 188)",
+              "count": 7
+            },
+            {
+              "value": "rgb(47, 81, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 4
+            },
+            {
+              "value": "rgb(112, 63, 47)",
+              "count": 4
+            },
+            {
+              "value": "rgb(48, 74, 156)",
+              "count": 4
+            },
+            {
+              "value": "rgb(78, 73, 62)",
+              "count": 4
+            },
+            {
+              "value": "rgb(82, 96, 120)",
+              "count": 3
+            },
+            {
+              "value": "rgb(138, 99, 38)",
+              "count": 3
+            },
+            {
+              "value": "rgb(0, 0, 0)",
+              "count": 3
+            },
+            {
+              "value": "rgb(70, 91, 149)",
+              "count": 2
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 2
+            },
+            {
+              "value": "rgb(138, 90, 17)",
+              "count": 2
+            },
+            {
+              "value": "rgb(43, 105, 66)",
+              "count": 2
+            },
+            {
+              "value": "rgb(73, 84, 107)",
+              "count": 1
+            },
+            {
+              "value": "rgb(167, 118, 39)",
+              "count": 1
+            },
+            {
+              "value": "rgb(50, 74, 149)",
+              "count": 1
+            },
+            {
+              "value": "rgb(54, 68, 98)",
+              "count": 1
+            }
+          ],
+          "backgrounds": [
+            {
+              "value": "rgba(0, 0, 0, 0)",
+              "count": 208
+            },
+            {
+              "value": "rgb(255, 255, 255)",
+              "count": 18
+            },
+            {
+              "value": "rgb(54, 88, 212)",
+              "count": 6
+            },
+            {
+              "value": "rgb(237, 240, 245)",
+              "count": 4
+            },
+            {
+              "value": "rgb(240, 243, 249)",
+              "count": 4
+            },
+            {
+              "value": "rgb(108, 131, 213)",
+              "count": 3
+            },
+            {
+              "value": "rgb(250, 240, 223)",
+              "count": 3
+            },
+            {
+              "value": "rgb(229, 233, 246)",
+              "count": 2
+            },
+            {
+              "value": "rgb(237, 241, 255)",
+              "count": 2
+            },
+            {
+              "value": "rgb(59, 86, 172)",
+              "count": 2
+            },
+            {
+              "value": "rgb(140, 156, 200)",
+              "count": 2
+            },
+            {
+              "value": "rgb(139, 161, 223)",
+              "count": 2
+            },
+            {
+              "value": "rgb(32, 43, 68)",
+              "count": 1
+            },
+            {
+              "value": "rgb(168, 184, 240)",
+              "count": 1
+            },
+            {
+              "value": "rgb(145, 169, 239)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 238, 255)",
+              "count": 1
+            },
+            {
+              "value": "rgb(233, 237, 244)",
+              "count": 1
+            },
+            {
+              "value": "rgb(232, 239, 223)",
+              "count": 1
+            },
+            {
+              "value": "rgb(241, 185, 160)",
+              "count": 1
+            },
+            {
+              "value": "rgb(255, 241, 218)",
+              "count": 1
+            }
+          ],
+          "fontFamilies": [
+            {
+              "value": "-apple-system, \"system-ui\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+              "count": 267
+            },
+            {
+              "value": "ui-monospace, monospace",
+              "count": 4
+            },
+            {
+              "value": "system-ui",
+              "count": 1
+            },
+            {
+              "value": "Georgia, serif",
+              "count": 1
+            }
+          ],
+          "fontSizes": [
+            {
+              "value": "12px",
+              "count": 126
+            },
+            {
+              "value": "14px",
+              "count": 101
+            },
+            {
+              "value": "0px",
+              "count": 21
+            },
+            {
+              "value": "23px",
+              "count": 6
+            },
+            {
+              "value": "8px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 3
+            },
+            {
+              "value": "29px",
+              "count": 3
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "13px",
+              "count": 1
+            },
+            {
+              "value": "20px",
+              "count": 1
+            },
+            {
+              "value": "10px",
+              "count": 1
+            },
+            {
+              "value": "55px",
+              "count": 1
+            }
+          ],
+          "spacing": [
+            {
+              "value": "12px",
+              "count": 21
+            },
+            {
+              "value": "7px",
+              "count": 15
+            },
+            {
+              "value": "5px",
+              "count": 12
+            },
+            {
+              "value": "8px",
+              "count": 10
+            },
+            {
+              "value": "6px",
+              "count": 10
+            },
+            {
+              "value": "2px",
+              "count": 10
+            },
+            {
+              "value": "1px",
+              "count": 9
+            },
+            {
+              "value": "3px",
+              "count": 6
+            },
+            {
+              "value": "20px",
+              "count": 6
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "16px",
+              "count": 5
+            },
+            {
+              "value": "11px",
+              "count": 5
+            },
+            {
+              "value": "4px",
+              "count": 4
+            },
+            {
+              "value": "14px",
+              "count": 3
+            },
+            {
+              "value": "9px",
+              "count": 3
+            },
+            {
+              "value": "10px",
+              "count": 2
+            },
+            {
+              "value": "25px",
+              "count": 2
+            },
+            {
+              "value": "28px",
+              "count": 1
+            },
+            {
+              "value": "30px",
+              "count": 1
+            },
+            {
+              "value": "22px",
+              "count": 1
+            }
+          ]
+        },
+        "reducedMotion": true,
+        "headings": [
+          {
+            "level": 1,
+            "text": "让好想法，有序发生。"
+          },
+          {
+            "level": 2,
+            "text": "我的项目 4"
+          },
+          {
+            "level": 3,
+            "text": "禾野 · 品牌视觉设计"
+          },
+          {
+            "level": 3,
+            "text": "拾光咖啡 · 品牌焕新"
+          },
+          {
+            "level": 3,
+            "text": "NOVA · 音乐社区设计"
+          },
+          {
+            "level": 3,
+            "text": "山海之间 · 酒店官网"
+          },
+          {
+            "level": 2,
+            "text": "交付日程"
+          },
+          {
+            "level": 2,
+            "text": "今天的小目标"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "resourceState": "settled",
+      "gate": "review"
+    }
+  ],
+  "gate": "review",
+  "limitations": [
+    "Automated checks do not certify WCAG compliance or judge visual quality.",
+    "Axe incomplete results require manual review.",
+    "Main user journeys, keyboard flow, authentication and persistence require separate interaction tests.",
+    "Reduced-motion is enabled for reproducible screenshots; animation requires a separate review."
+  ]
+}

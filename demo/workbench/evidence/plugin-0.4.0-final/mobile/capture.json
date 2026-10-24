@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "interaction",
+  "createdAt": "2026-10-24T00:10:13.115Z",
+  "ok": true,
+  "gate": "pass",
+  "target": "index.html",
+  "device": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "screenshot": "/Users/Admin/project/ui_plugin/demo/workbench/evidence/plugin-0.4.0-final/mobile/capture.png",
+  "steps": [
+    {
+      "action": "click",
+      "selector": "#new-project",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "selector": "#project-name",
+      "condition": "focused",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "action": "key",
+      "key": "Tab",
+      "shift": true,
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "selector": "#project-dialog .icon-button",
+      "condition": "focused",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "action": "key",
+      "key": "Tab",
+      "shift": true,
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "selector": "#save-project",
+      "condition": "focused",
+      "pass": true,
+      "actual": true
+    },
+    {
+      "action": "fill",
+      "selector": "#project-name",
+      "text": "新版插件实测",
+      "pass": true
+    },
+    {
+      "action": "fill",
+      "selector": "#client-name",
+      "text": "LLY",
+      "pass": true
+    },
+    {
+      "action": "fill",
+      "selector": "#project-date",
+      "text": "2026-10-30",
+      "pass": true
+    },
+    {
+      "action": "click",
+      "selector": "#save-project",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "selector": "#project-dialog",
+      "condition": "hidden",
+      "pass": true,
+      "actual": 0
+    },
+    {
+      "action": "reload",
+      "pass": true
+    },
+    {
+      "action": "fill",
+      "selector": "#search",
+      "text": "新版插件实测",
+      "pass": true
+    },
+    {
+      "action": "assert",
+      "selector": ".project-card",
+      "condition": "count",
+      "count": 1,
+      "pass": true,
+      "actual": 1
+    },
+    {
+      "action": "assert",
+      "selector": ".project-card h3",
+      "condition": "text",
+      "text": "新版插件实测",
+      "pass": true,
+      "actual": "新版插件实测"
+    }
+  ],
+  "observed": {
+    "title": "序间 · 独立创作者工作台",
+    "url": "http://127.0.0.1:52020/index.html",
+    "text": "跳到主要内容\n序间\n林\n我的工作空间 / 工作台\n✳\n今天也给创作留点时间\n让好想法，有序发生。\n\n项目、待办与交付，都在你的节奏里。\n\n新建项目\n在手项目\n4个\n等待客户反馈\n1个\n本周待交付\n2个\n我的项目 5\n项目视图\n全部项目\n进行中\n待反馈\n已完成\n⌘ K\n新版插件\nA NEW CREATIVE CHAPTER\n品牌视觉\n进行中\n新版插件实测\n\nLLY\n\n项目进度\n0%\n10 月 30 日 交付\nL\n交付日程\n10 月\n一\n19\n二\n20\n三\n21\n四\n22\n五\n23\n六\n24\n日\n25\n拾光咖啡 · 确认反馈\n\n品牌视觉 · 拾光咖啡\n\n今天\n禾野 · 方案交付\n\n品牌视觉 · 禾野植物研究所\n\n10 月 25 日\nNOVA · 方案交付\n\n产品设计 · NOVA 音乐\n\n10 月 28 日\n\n提前一点，才能从容一点。\n\n今天的小目标\n1/3\n整理本周灵感参考\n发送禾野品牌终稿\n确认拾光咖啡反馈\n\n一件一件来，慢慢也很快。\n\n属于你的工作节奏。",
+    "activeElement": "<input id=\"search\" type=\"search\" placeholder=\"搜索项目\" aria-label=\"搜索项目名称或客户\">"
+  },
+  "consoleErrors": [],
+  "note": "Pass covers only explicit assertions. Reload stays in the isolated session; no backend success is inferred. Failure stops the flow and preserves screenshot and observations."
+}

@@ -92,3 +92,10 @@ python3 scripts/package.py
 [dsh-oil-ui](https://github.com/oil-oil/dsh-oil-ui) 是需求与同类产品参考。当前版本没有包含其工作台源码、工具参数定义、技能文档、模板、品牌素材或测试文件；这些部分已由本项目独立实现。此前的技能适配原型已被取代。
 
 标准第三方库包括 MCP SDK、axe-core、Ajv、pngjs 和 pixelmatch，各自保留许可。本项目不是 OpenAI 或 oil-oil 的官方产品。
+
+### 0.4.0：从实际页面反馈改进
+
+设计方向新增任务收益、代价、手机重排与可观察质量标准，配合原尺寸截图复核。
+交互工具新增刷新、反向 Tab 和显式结果断言；错误会保留现场，无断言不会被标为通过。
+审计有待复核项时显示 `review`，并保留问题节点；报告可通过 `interactions` 合并真实交互证据。
+详见 [更新记录](CHANGELOG.md) 与 [实际重跑证据](demo/workbench/evidence/plugin-0.4.0-final/report.html)。
